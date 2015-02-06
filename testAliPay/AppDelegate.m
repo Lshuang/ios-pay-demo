@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "JSenPayEngine.h"
 #import <BeeCloud/BeeCloud.h>
 @interface AppDelegate ()//<WXApiDelegate>
 
@@ -29,9 +28,6 @@
     [self.window makeKeyAndVisible];
     return YES;
     
-    
-    
-    return YES;
 }
 
 /*
