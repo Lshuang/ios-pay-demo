@@ -1,0 +1,19 @@
+PODS:
+  - BeeCloud (2.1)
+
+DEPENDENCIES:
+  - BeeCloud (from `https://github.com/lacusrinz/BeeCloudFramework.git`)
+
+EXTERNAL SOURCES:
+  BeeCloud:
+    :git: https://github.com/lacusrinz/BeeCloudFramework.git
+
+CHECKOUT OPTIONS:
+  BeeCloud:
+    :commit: f0f1a1b6aedc1fad5c882b81e1bbe95c0a07dc44
+    :git: https://github.com/lacusrinz/BeeCloudFramework.git
+
+SPEC CHECKSUMS:
+  BeeCloud: 2226caf34b8608dd1adbd5a84e35c6e9aef7a004
+
+COCOAPODS: 0.36.0.beta.2
