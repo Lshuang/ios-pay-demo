@@ -175,13 +175,13 @@
 - (NSArray *)queryOrder:(NSUInteger)index {
     NSArray *array = nil;
     if (index == 0) {
-        array = [BCPay queryOrderByKey:OrderKeyTraceID value:@"BeeCloud01" channelAction:BCPayWxPay];
+        array = [BCPay queryOrderByKey:OrderKeyTraceID value:@"BeeCloud01" orderType:BCPayWxPay];
         self.listName.text = @"微信订单";
     } else if(index == 1) {
-        array = [BCPay queryOrderByKey:OrderKeyTraceID value:@"BeeCloud01" channelAction:BCPayAliPay];
+        array = [BCPay queryOrderByKey:OrderKeyTraceID value:@"BeeCloud01" orderType:BCPayAliPay];
         self.listName.text = @"支付宝订单";
     }else{
-        array = [BCPay queryOrderByKey:OrderKeyTraceID value:@"BeeCloud01" channelAction:BCPayUPPay];
+        array = [BCPay queryOrderByKey:OrderKeyTraceID value:@"BeeCloud01" orderType:BCPayUPPay];
         self.listName.text = @"银联订单";
     }
     return array;
@@ -199,7 +199,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
     }
     
-    NSString * trade_status_key = (paySegment.selectedSegmentIndex==0)?@"trade_state":@"trade_status";
+    NSString * trade_status_key = @"trade_state";
     cell.textLabel.text = [NSString stringWithFormat:@"%@支付金额:%@ 交易状态:%@", [[self.payList objectAtIndex:indexPath.row] objectForKey:@"trace_id"], [[self.payList objectAtIndex:indexPath.row] objectForKey:@"total_fee"], [[self.payList objectAtIndex:indexPath.row] objectForKey:trade_status_key]];
     
     [cell.textLabel setFont:[UIFont systemFontOfSize:13]];
@@ -210,7 +210,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (paySegment.selectedSegmentIndex == 0) {
-        if ([[self.payList[indexPath.row] objectForKey:@"trade_state"]isEqualToString:@"0"]) {
+        if ([[self.payList[indexPath.row] objectForKey:@"trade_state"]isEqualToString:@"TRADE_SUCCESS"]) {
             UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"退款" message:@"请求退款？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
             _out_trade_no = [self.payList[indexPath.row] objectForKey:@"out_trade_no"];
             [alert show];
@@ -220,7 +220,7 @@
             [alert show];
         }
     } else if(paySegment.selectedSegmentIndex == 1) {
-        if ([[self.payList[indexPath.row] objectForKey:@"trade_status"] isEqualToString:@"TRADE_SUCCESS"]) {
+        if ([[self.payList[indexPath.row] objectForKey:@"trade_state"] isEqualToString:@"TRADE_SUCCESS"]) {
             UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"退款" message:@"请求退款？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
             _out_trade_no = [self.payList[indexPath.row] objectForKey:@"out_trade_no"];
             [alert show];
@@ -230,7 +230,7 @@
             [alert show];
         }
     }else if(paySegment.selectedSegmentIndex == 2){
-        if ([[self.payList[indexPath.row] objectForKey:@"trade_status"] isEqualToString:@"TRADE_SUCCESS"]) {
+        if ([[self.payList[indexPath.row] objectForKey:@"trade_state"] isEqualToString:@"TRADE_SUCCESS"]) {
             UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"退款" message:@"请求退款？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
             _out_trade_no = [self.payList[indexPath.row] objectForKey:@"out_trade_no"];
             [alert show];

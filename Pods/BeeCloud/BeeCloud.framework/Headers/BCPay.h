@@ -46,8 +46,22 @@
  *  @param ca    支付平台的支付订单或者退款订单。
  *
  *  @return 符合条件的订单列表
+    ("subject",商品名称) ("body",商品描述) ("buyer_id",买家ID) ("buyer_email",买家emai) ("trace_time",订单创建时间)
+    ("out_trade_no",商家自定义订单号) ("partner",商家ID) ("refund_status",退款状态)
+    ("seller_email",卖家email) ("seller_id",卖家ID) ("total_fee",支付金额) ("trace_id",商户平台用户名)
+    ("trade_state",交易状态) ("trace_no",交易流水号) ("refund_finish",退款操作是否完成)
+    ("refund_fee",退款金额) ("refund_reason",退款原因) ("reject_reason",拒绝退款原因)
+    ("refund_status",退款实时状态)
+   @refund status
+    REFUND_START = 0; //退款开始
+    REFUND_REJECT = 1; //退款被商家拒绝
+    REFUND_ACCEPT = 2; //退款被商家同意
+    REFUND_SUCCESS = 3; //退款成功
+    REFUND_FAIL = 4; //退款被渠道拒绝
+    REFUND_RETRY = 5; //退款被渠道拒绝，但原因不明， 需要用原退款单号重试
+    REFUND_NEED_OFFLINE = 6; //用户银行卡已注销，现金回流到商户账户，需要走线下人工操作
  */
-+ (NSArray *)queryOrderByKey:(BCPayOrderKey)key value:(NSString *)value channelAction:(BCPayOrderType)ca;
++ (NSArray *)queryOrderByKey:(BCPayOrderKey)key value:(NSString *)value orderType:(BCPayOrderType)type;
 
 /**
  *  异步查询支付订单或退款订单。内置购买只支持查询支付订单表。
@@ -57,7 +71,7 @@
  *  @param ca    支付平台的支付订单或者退款订单
  *  @param block 接收查询结果
  */
-+ (void)querOrderByKeyAsync:(BCPayOrderKey)key value:(NSString *)value channelAction:(BCPayOrderType)ca block:(BCArrayResultBlock)block;
++ (void)querOrderByKeyAsync:(BCPayOrderKey)key value:(NSString *)value orderType:(BCPayOrderType)type block:(BCArrayResultBlock)block;
 
 #pragma mark - In-App-Purchase functions
 /** @name IAP Get products list,purchase product,restore product*/
