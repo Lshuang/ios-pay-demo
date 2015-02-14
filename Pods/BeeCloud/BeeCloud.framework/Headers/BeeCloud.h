@@ -22,8 +22,8 @@
 /**
  *  BeeCloud SDK release version.
  */
-static NSString * const kBeeCloudVersionString = @"2.1";
-static double const kBeeCloudVersionNumber = 2.1;
+static NSString * const kBeeCloudVersionString = @"2.2";
+static double const kBeeCloudVersionNumber = 2.2;
 
 /**
  *  Global configuration and control methods for BeeCloud.
@@ -36,9 +36,9 @@ static double const kBeeCloudVersionNumber = 2.1;
  *
  *  Notice that this function returns immediately and does not block the UI thread.
  *
- *  @param key App Key obtained from BeeCloud website.
+ *  @param key Appid and appSecret obtained from BeeCloud dashborad website.
  */
-+ (void)initWithAppKey:(NSString *)key;
++ (void)initWithAppID:(NSString *)appId andAppSecret:(NSString *)appSecret;
 
 /**
  *  Change the default network timeout in seconds for all network requests.

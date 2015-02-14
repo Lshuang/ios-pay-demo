@@ -16,7 +16,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [BeeCloud initWithAppKey:@"39a7a518-9ac8-4a9e-87bc-7885f33cf18c"];
+//    [BeeCloud initWithAppKey:@"39a7a518-9ac8-4a9e-87bc-7885f33cf18c"];
+    [BeeCloud initWithAppID:@"c5d1cba1-5e3f-4ba0-941d-9b0a371fe719" andAppSecret:@"39a7a518-9ac8-4a9e-87bc-7885f33cf18c"];
     [BeeCloud setNetworkTimeout:10.0];
     return YES;
 }

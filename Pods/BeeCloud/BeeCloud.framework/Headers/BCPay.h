@@ -52,7 +52,7 @@
     ("trade_state",交易状态) ("trace_no",交易流水号) ("refund_finish",退款操作是否完成)
     ("refund_fee",退款金额) ("refund_reason",退款原因) ("reject_reason",拒绝退款原因)
     ("refund_status",退款实时状态)
-   @refund status
+    @refund status
     REFUND_START = 0; //退款开始
     REFUND_REJECT = 1; //退款被商家拒绝
     REFUND_ACCEPT = 2; //退款被商家同意
