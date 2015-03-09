@@ -34,7 +34,7 @@
 		</data>
 		<key>Headers/BCPay.h</key>
 		<data>
-		3qL+MOODKF4jeelT/Bvh9WsJBAE=
+		vcDE6M7z4KMMTRjCPGmGVRUFb3E=
 		</data>
 		<key>Headers/BCQuery.h</key>
 		<data>
@@ -46,11 +46,51 @@
 		</data>
 		<key>Headers/BCUtil.h</key>
 		<data>
-		tlb6DwBD8BMA0wzBol4HZDUlOUQ=
+		GuDuNVly3jRaD5Jfcuu3uZpSuoU=
+		</data>
+		<key>Headers/BC_HTTPRequestOperation.h</key>
+		<data>
+		hQYlAlixiy1cPObbeHnOQTTiQAU=
+		</data>
+		<key>Headers/BC_HTTPRequestOperationManager.h</key>
+		<data>
+		TW4XRtEJhX0T4O6p0rpZnFok04g=
+		</data>
+		<key>Headers/BC_HTTPSessionManager.h</key>
+		<data>
+		w2chQS4xw1t4wTFcVTvpXWR1C4w=
+		</data>
+		<key>Headers/BC_NetworkReachabilityManager.h</key>
+		<data>
+		X/6yiLS+LtPDO2WjMVEqtJhzXuQ=
+		</data>
+		<key>Headers/BC_Networking.h</key>
+		<data>
+		zpp9mI4f50g3UkCAGSb4ABMvLWw=
+		</data>
+		<key>Headers/BC_SecurityPolicy.h</key>
+		<data>
+		T0TRK/fifgG5Lp56A0a5F8DF3yU=
+		</data>
+		<key>Headers/BC_URLConnectionOperation.h</key>
+		<data>
+		Mt0l3BVFJBoAWk7Hrxkvz3p8bk8=
+		</data>
+		<key>Headers/BC_URLRequestSerialization.h</key>
+		<data>
+		PT03TvyISSPWg/adQA/BQuiDycU=
+		</data>
+		<key>Headers/BC_URLResponseSerialization.h</key>
+		<data>
+		OZjQi6ZPES44ugl/xTaTgALosfk=
+		</data>
+		<key>Headers/BC_URLSessionManager.h</key>
+		<data>
+		Xf1Si0fm8y96wJP2VF43kJkutrw=
 		</data>
 		<key>Headers/BeeCloud.h</key>
 		<data>
-		EUDPePHz0MNFkQVxypt9FjIW7GA=
+		Bqp7IsLld9VX0RCWOXu02Sr7kEQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -93,7 +133,7 @@
 		</data>
 		<key>Headers/BCPay.h</key>
 		<data>
-		3qL+MOODKF4jeelT/Bvh9WsJBAE=
+		vcDE6M7z4KMMTRjCPGmGVRUFb3E=
 		</data>
 		<key>Headers/BCQuery.h</key>
 		<data>
@@ -105,11 +145,51 @@
 		</data>
 		<key>Headers/BCUtil.h</key>
 		<data>
-		tlb6DwBD8BMA0wzBol4HZDUlOUQ=
+		GuDuNVly3jRaD5Jfcuu3uZpSuoU=
+		</data>
+		<key>Headers/BC_HTTPRequestOperation.h</key>
+		<data>
+		hQYlAlixiy1cPObbeHnOQTTiQAU=
+		</data>
+		<key>Headers/BC_HTTPRequestOperationManager.h</key>
+		<data>
+		TW4XRtEJhX0T4O6p0rpZnFok04g=
+		</data>
+		<key>Headers/BC_HTTPSessionManager.h</key>
+		<data>
+		w2chQS4xw1t4wTFcVTvpXWR1C4w=
+		</data>
+		<key>Headers/BC_NetworkReachabilityManager.h</key>
+		<data>
+		X/6yiLS+LtPDO2WjMVEqtJhzXuQ=
+		</data>
+		<key>Headers/BC_Networking.h</key>
+		<data>
+		zpp9mI4f50g3UkCAGSb4ABMvLWw=
+		</data>
+		<key>Headers/BC_SecurityPolicy.h</key>
+		<data>
+		T0TRK/fifgG5Lp56A0a5F8DF3yU=
+		</data>
+		<key>Headers/BC_URLConnectionOperation.h</key>
+		<data>
+		Mt0l3BVFJBoAWk7Hrxkvz3p8bk8=
+		</data>
+		<key>Headers/BC_URLRequestSerialization.h</key>
+		<data>
+		PT03TvyISSPWg/adQA/BQuiDycU=
+		</data>
+		<key>Headers/BC_URLResponseSerialization.h</key>
+		<data>
+		OZjQi6ZPES44ugl/xTaTgALosfk=
+		</data>
+		<key>Headers/BC_URLSessionManager.h</key>
+		<data>
+		Xf1Si0fm8y96wJP2VF43kJkutrw=
 		</data>
 		<key>Headers/BeeCloud.h</key>
 		<data>
-		EUDPePHz0MNFkQVxypt9FjIW7GA=
+		Bqp7IsLld9VX0RCWOXu02Sr7kEQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

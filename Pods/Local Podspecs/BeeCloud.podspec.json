@@ -1,6 +1,6 @@
 {
   "name": "BeeCloud",
-  "version": "2.1",
+  "version": "2.3",
   "summary": "BeeCloud云服务 致力加速App 开发",
   "homepage": "http://beecloud.cn",
   "license": {
@@ -12,7 +12,7 @@
     "ios": null
   },
   "source": {
-    "http": "http://beecloud.cn/download/file/BeeCloud.framework.v2.1.zip"
+    "http": "http://beecloud.cn/download/file/BeeCloud.framework.zip"
   },
   "frameworks": [
     "CoreGraphics",
@@ -23,11 +23,9 @@
     "UIKit",
     "CoreTelephony"
   ],
+  "libraries": "sqlite3",
   "vendored_frameworks": [
     "BeeCloud.framework",
-    "AlipaySDK.framework"
-  ],
-  "libraries": [
     "sqlite3",
     "c++",
     "z"

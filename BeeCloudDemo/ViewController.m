@@ -54,7 +54,7 @@
 // 通过该方法实现对各种参数的初始化，然后发起微信支付，并跳转到微信.
 - (void)wxPay{
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    [BCPay reqWXPayment:@"自制白开水" totalFee:@"1" outTradeNo:outTradeNo traceID:@"BeeCloud01" payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCWXPay reqWXPayment:@"自制白开水" totalFee:@"1" outTradeNo:outTradeNo traceID:@"BeeCloud01" payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             // 表明微信支付成功
         } else {
@@ -72,7 +72,7 @@
 - (void)wxRefund:(NSString*)outTradeNo{
     NSString *outRefundNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
     NSLog(@"refund no = %@", outRefundNo);
-    [BCPay reqWXRefund:outTradeNo outRefundNo:outRefundNo refundReason:@"不好喝" refundFee:@"1" payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCWXPay reqWXRefund:outTradeNo outRefundNo:outRefundNo refundReason:@"不好喝" refundFee:@"1" payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             // 退款申请成功
         } else {
@@ -93,7 +93,7 @@
 //  @param block        支付结果回调
 - (void)aliPay{
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    [BCPay reqAliPayment:@"BeeCloud01" outTradeNo:outTradeNo subject:@"自制白开水" body:@"BeeCloud 自制白开水" totalFee:@"0.01" scheme:@"payTestDemo" payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCAliPay reqAliPayment:@"BeeCloud01" outTradeNo:outTradeNo subject:@"自制白开水" body:@"BeeCloud 自制白开水" totalFee:@"0.01" scheme:@"payTestDemo" payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             // 表明支付宝支付成功
         } else {
@@ -117,7 +117,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyyMMddHHmmss"];
     NSString *dateString = [formatter stringFromDate:date];
-    [BCPay reqAliRefund:out_trade_no refundNo:dateString refundFee:@"0.01" refundReason:@"不好吃" refundBlock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCAliPay reqAliRefund:out_trade_no refundNo:dateString refundFee:@"0.01" refundReason:@"不好吃" refundBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if(success){
             //
         }else{
@@ -136,7 +136,7 @@
 //  @param block          接收支付结果回调
 - (void)unionPay{
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    [BCPay reqUnionPayment:@"BeeCloud01" body:@"渣渣菜鸡" outTradeNo:outTradeNo totalFee:@"1" viewController:self payblock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCUnionPay reqUnionPayment:@"BeeCloud01" body:@"渣渣菜鸡" outTradeNo:outTradeNo totalFee:@"1" viewController:self payblock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             //
         }else{
@@ -154,7 +154,7 @@
 //  @param block         接收预退款订单生成结果
 - (void)unionRefund:(NSString*)outTradeNo{
     NSString *outRefundNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    [BCPay reqUnionRefund:outTradeNo refundFee:@"0.01" outRefundNo:outRefundNo refundReason:@"难吃" refundBlock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCUnionPay reqUnionRefund:outTradeNo refundFee:@"0.01" outRefundNo:outRefundNo refundReason:@"难吃" refundBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             //
         }else{
@@ -175,13 +175,13 @@
 - (NSArray *)queryOrder:(NSUInteger)index {
     NSArray *array = nil;
     if (index == 0) {
-        array = [BCPay queryOrderByKey:OrderKeyTraceID value:@"BeeCloud01" orderType:BCPayWxPay];
+        array = [BCWXPay queryWXPayOrderByKey:OrderKeyTraceID value:@"BeeCloud01" orderType:BCPayWxPay];
         self.listName.text = @"微信订单";
     } else if(index == 1) {
-        array = [BCPay queryOrderByKey:OrderKeyTraceID value:@"BeeCloud01" orderType:BCPayAliPay];
+        array = [BCAliPay queryAliOrderByKey:OrderKeyTraceID value:@"BeeCloud01" orderType:BCPayAliPay];
         self.listName.text = @"支付宝订单";
     }else{
-        array = [BCPay queryOrderByKey:OrderKeyTraceID value:@"BeeCloud01" orderType:BCPayUPPay];
+        array = [BCUnionPay queryUPOrderByKey:OrderKeyTraceID value:@"BeeCloud01" orderType:BCPayUPPay];
         self.listName.text = @"银联订单";
     }
     return array;

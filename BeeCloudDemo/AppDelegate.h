@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <BeeCloud/BeeCloud.h>
 #import "ViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

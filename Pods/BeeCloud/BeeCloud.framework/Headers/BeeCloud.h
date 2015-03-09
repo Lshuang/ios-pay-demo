@@ -18,6 +18,7 @@
 #import "BCQuery.h"
 #import "BCUtil.h"
 #import "BCUser.h"
+#import "BC_Networking.h"
 
 /**
  *  BeeCloud SDK release version.

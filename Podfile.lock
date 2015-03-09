@@ -1,19 +1,47 @@
 PODS:
-  - BeeCloud (2.1)
+  - BeeCloud (2.3)
+  - BeeCloud_aliPay (2.3)
+  - BeeCloud_UPay (2.3)
+  - BeeCloud_wxPay (2.3)
 
 DEPENDENCIES:
-  - BeeCloud (from `https://github.com/lacusrinz/BeeCloudFramework.git`)
+  - BeeCloud (from `https://github.com/beecloud/ios-sdk-cocoapods-release.git`, branch `core`)
+  - BeeCloud_aliPay (from `https://github.com/beecloud/ios-sdk-cocoapods-release.git`, branch `aliPay`)
+  - BeeCloud_UPay (from `https://github.com/beecloud/ios-sdk-cocoapods-release.git`, branch `UnionPay`)
+  - BeeCloud_wxPay (from `https://github.com/beecloud/ios-sdk-cocoapods-release.git`, branch `wxPay`)
 
 EXTERNAL SOURCES:
   BeeCloud:
-    :git: https://github.com/lacusrinz/BeeCloudFramework.git
+    :branch: core
+    :git: https://github.com/beecloud/ios-sdk-cocoapods-release.git
+  BeeCloud_aliPay:
+    :branch: aliPay
+    :git: https://github.com/beecloud/ios-sdk-cocoapods-release.git
+  BeeCloud_UPay:
+    :branch: UnionPay
+    :git: https://github.com/beecloud/ios-sdk-cocoapods-release.git
+  BeeCloud_wxPay:
+    :branch: wxPay
+    :git: https://github.com/beecloud/ios-sdk-cocoapods-release.git
 
 CHECKOUT OPTIONS:
   BeeCloud:
-    :commit: f0f1a1b6aedc1fad5c882b81e1bbe95c0a07dc44
-    :git: https://github.com/lacusrinz/BeeCloudFramework.git
+    :commit: 981d9109f3c22f30da0dccd9453d0ef15f1de824
+    :git: https://github.com/beecloud/ios-sdk-cocoapods-release.git
+  BeeCloud_aliPay:
+    :commit: 658174f173b1e984c010efe4065fee9e53f02b1e
+    :git: https://github.com/beecloud/ios-sdk-cocoapods-release.git
+  BeeCloud_UPay:
+    :commit: 6b66f47bcc1f0d47c1adfcfe4301708955e865b6
+    :git: https://github.com/beecloud/ios-sdk-cocoapods-release.git
+  BeeCloud_wxPay:
+    :commit: f54e78eb3c6653ecbed9e91df6645fecd63e2696
+    :git: https://github.com/beecloud/ios-sdk-cocoapods-release.git
 
 SPEC CHECKSUMS:
-  BeeCloud: 2226caf34b8608dd1adbd5a84e35c6e9aef7a004
+  BeeCloud: db5049a63fbbb9781fc8e5bde978eb84c0a6440d
+  BeeCloud_aliPay: dced3e71a9f16964d535e8ba180d9670a9c63bf6
+  BeeCloud_UPay: 8a5f42524b2cbd5be701c96894bad1004076864c
+  BeeCloud_wxPay: 9e25628889b262fad8c3c251aaec964d84213e13
 
 COCOAPODS: 0.36.0.beta.2

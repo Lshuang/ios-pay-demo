@@ -191,4 +191,24 @@
  */
 + (NSString *)getIPAddress:(BOOL)preferIPv4;
 
+/**
+ *  get best host
+ *
+ *  @param format url format
+ *
+ *  @return request url
+ */
++ (NSString *)getBestHostWithFormat:(NSString *)format;
+
+/**
+ *  get App singnature
+ *
+ *  @return signature
+ */
++ (NSString *)getAppSignature;
+
++ (NSString *)getAppID;
+
++ (NSString *)getWeChatAppID;
+
 @end

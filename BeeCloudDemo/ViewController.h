@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <BeeCloud/BeeCloud.h>
+#import <BCAliPay/BCAliPay.h>
+#import <BCWXPay/BCWXPay.h>
+#import <BCUnionPay/BCUnionPay.h>
 
 @interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 
