@@ -60,6 +60,8 @@
         } else {
             // 表明支付过程中出现错误，strMsg为错误原因
         }
+        [self showAlertView:strMsg];
+
         NSLog(@"%s strMsg = %@", __func__, strMsg);
     }];
 }
@@ -78,6 +80,8 @@
         } else {
             // 退款失败，strMsg为错误原因
         }
+        [self showAlertView:strMsg];
+
         NSLog(@"%s,%s,%d,%@", __FILE__, __func__, __LINE__, error);
     }];
 }
@@ -99,6 +103,8 @@
         } else {
             // 表明支付过程中出现错误，strMsg为错误原因
         }
+        [self showAlertView:strMsg];
+
         NSLog(@"AliPay strMsg = %@", strMsg);
     }];
 }
@@ -123,6 +129,8 @@
         }else{
             NSLog(@"Failed:%@",error.description);
         }
+        [self showAlertView:strMsg];
+
         NSLog(@"Msg:%@",strMsg);
     }];
 }
@@ -142,6 +150,7 @@
         }else{
             NSLog(@"UnionPay Faild:%@",error.description);
         }
+        [self showAlertView:strMsg];
         NSLog(@"Msg:%@", strMsg);
     }];
 }
@@ -160,8 +169,14 @@
         }else{
             NSLog(@"UnionRefund Faild:%@",error.description);
         }
+        [self showAlertView:strMsg];
         NSLog(@"Msg:%@", strMsg);
     }];
+}
+
+- (void)showAlertView:(NSString *)msg {
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 #pragma mark - 订单查询
