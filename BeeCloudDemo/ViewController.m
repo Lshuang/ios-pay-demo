@@ -59,6 +59,7 @@
         if (success) {
             // 表明微信支付成功
         } else {
+            NSLog(@"%@",error.description);
             // 表明支付过程中出现错误，strMsg为错误原因
         }
         [self showAlertView:strMsg];
