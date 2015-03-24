@@ -120,7 +120,7 @@
 //  @param refund_fee    退款金额
 //  @param refund_reason 退款原因
 //  @param block         退款结果回调
-- (void)aliRefund:(NSString*)out_trade_no{
+- (void)aliRefund:(NSString*)out_trade_no {
     NSDate *date = [NSDate date];
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateFormat:@"yyyyMMddHHmmss"];
@@ -128,8 +128,8 @@
     [BCAliPay reqAliRefund:out_trade_no refundNo:dateString refundFee:@"0.01" refundReason:@"不好吃" refundBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if(success){
             //
-        }else{
-            NSLog(@"Failed:%@",error.description);
+        } else {
+            
         }
         [self showAlertView:strMsg];
 
