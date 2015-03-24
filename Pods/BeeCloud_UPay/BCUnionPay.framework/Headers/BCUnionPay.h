@@ -33,7 +33,13 @@ FOUNDATION_EXPORT const unsigned char BCUnionPayVersionString[];
  *  @param viewController 调起银联支付的页面
  *  @param block          接收支付结果回调
  */
-+ (void)reqUnionPayment:(NSString *)trace_id body:(NSString *)body outTradeNo:(NSString *)out_trade_no totalFee:(NSString *)total_fee viewController:(UIViewController *)viewController payblock:(BCPayBlock)block ;
++ (void)reqUnionPayment:(NSString *)trace_id
+                   body:(NSString *)body
+             outTradeNo:(NSString *)out_trade_no
+               totalFee:(NSString *)total_fee
+         viewController:(UIViewController *)viewController
+               optional:(NSMutableDictionary *)optional
+               payblock:(BCPayBlock)block ;
 
 /**
  *  银联预退款，支持部分退款或者全额退款。如果提供的支付订单的交易状态不支持退款，在block中返回具体的信息;如果支持退款，生成预退款订单，商户在管理后台管理预退款订单。

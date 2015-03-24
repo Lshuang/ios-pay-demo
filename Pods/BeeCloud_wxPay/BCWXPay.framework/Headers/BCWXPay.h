@@ -46,6 +46,7 @@ FOUNDATION_EXPORT const unsigned char BCWXPayVersionString[];
             totalFee:(NSString *)wx_totalFee
           outTradeNo:(NSString *)wx_outTradeNo
              traceID:(NSString *)wx_traceId
+            optional:(NSMutableDictionary *)optional
             payBlock:(BCPayBlock)block;
 
 /**

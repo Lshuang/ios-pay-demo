@@ -54,7 +54,8 @@
 // 通过该方法实现对各种参数的初始化，然后发起微信支付，并跳转到微信.
 - (void)wxPay{
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    [BCWXPay reqWXPayment:kBody totalFee:@"1" outTradeNo:outTradeNo traceID:kTraceID payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"value",@"key", nil];
+    [BCWXPay reqWXPayment:kBody totalFee:@"1" outTradeNo:outTradeNo traceID:kTraceID optional:dict payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             // 表明微信支付成功
         } else {
@@ -96,8 +97,9 @@
 //  @param scheme       调用支付的app注册在info.plist中的scheme
 //  @param block        支付结果回调
 - (void)aliPay{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"value",@"key", nil];
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    [BCAliPay reqAliPayment:kTraceID outTradeNo:outTradeNo subject:kBody body:kSubject totalFee:@"0.01" scheme:@"payTestDemo" payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCAliPay reqAliPayment:kTraceID outTradeNo:outTradeNo subject:kBody body:kSubject totalFee:@"0.01" scheme:@"payTestDemo" optional:dict payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             // 表明支付宝支付成功
         } else {
@@ -143,8 +145,9 @@
 //  @param viewController 调起银联支付的页面,一般为self
 //  @param block          接收支付结果回调
 - (void)unionPay{
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"value",@"key", nil];
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    [BCUnionPay reqUnionPayment:kTraceID body:kBody outTradeNo:outTradeNo totalFee:@"1" viewController:self payblock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCUnionPay reqUnionPayment:kTraceID body:kBody outTradeNo:outTradeNo totalFee:@"1" viewController:self optional:dict payblock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             //
         }else{

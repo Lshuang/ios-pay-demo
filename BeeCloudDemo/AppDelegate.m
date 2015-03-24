@@ -23,11 +23,22 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    return [BCAliPay handleOpenUrl:url withBlock:^(BOOL success, NSString *strMsg, NSError *error) {
-        NSLog(@"strMsg = %@", strMsg);
-        UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:strMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alert show];
-    }];
+    if (BCPayUrlWeChat == [BCUtil getUrlType:url]) {
+        return [BCWXPay handleOpenUrl:url withBlock:^(BOOL success, NSString *strMsg, NSError *error) {
+            NSLog(@"strMsg = %@", strMsg);
+            UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:strMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alert show];
+        }];
+    } else if (BCPayUrlAlipay == [BCUtil getUrlType:url]) {
+        return [BCAliPay handleOpenUrl:url withBlock:^(BOOL success, NSString *strMsg, NSError *error) {
+            NSLog(@"strMsg = %@", strMsg);
+            UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:strMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alert show];
+        }];
+    } else {
+        //
+    }
+    return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

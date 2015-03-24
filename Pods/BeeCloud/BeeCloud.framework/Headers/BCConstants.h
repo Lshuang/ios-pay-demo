@@ -98,6 +98,24 @@ typedef NS_ENUM(NSInteger, BCFileStatus) {
 };
 
 /**
+ *  BCPay URL type for handling URLs.
+ */
+typedef NS_ENUM(NSInteger, BCPayUrlType){
+    /**
+     *  Unknown type.
+     */
+    BCPayUrlUnknown,
+    /**
+     *  WeChat pay.
+     */
+    BCPayUrlWeChat,
+    /**
+     *  Alipay.
+     */
+    BCPayUrlAlipay
+};
+
+/**
  * Pay channel&action.WeChatPay,AliPay,IAP,UnionPay...
  */
 typedef NS_ENUM(NSInteger, BCPayOrderType) {

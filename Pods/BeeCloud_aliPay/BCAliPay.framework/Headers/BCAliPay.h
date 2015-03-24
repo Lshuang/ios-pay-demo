@@ -42,6 +42,7 @@ FOUNDATION_EXPORT const unsigned char BCAliPayVersionString[];
                  body:(NSString *)ali_body
              totalFee:(NSString *)ali_total_fee
                scheme:(NSString *)ali_scheme
+             optional:(NSMutableDictionary *)optional
              payBlock:(BCPayBlock)block;
 
 /**

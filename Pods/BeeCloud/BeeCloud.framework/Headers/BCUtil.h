@@ -207,8 +207,32 @@
  */
 + (NSString *)getAppSignature;
 
+/**
+ *  BeeCloud App ID
+ *
+ *  @return appID
+ */
 + (NSString *)getAppID;
 
+/**
+ *  WeChat App ID
+ *
+ *  @return wechat appID
+ */
 + (NSString *)getWeChatAppID;
+
+/**
+ *  when network failure, check host
+ */
++ (void)checkRequestFail;
+
+/**
+ *  Determines the type of URL based on the specified URL for handling.
+ *
+ *  @param url The specified URL.
+ *
+ *  @return The URL type, including BCPayUrlWeChat for Wechat pay, BCPayUrlAlipay for Alipay, or BCPayUrlUnknown if none fits.
+ */
++ (BCPayUrlType)getUrlType:(NSURL *)url;
 
 @end
