@@ -53,4 +53,18 @@ static double const kBeeCloudVersionNumber = 2.4;
  */
 + (void)clearAllCache;
 
+/**
+ *  This is a switch to print log message.Default NO.
+ *
+ *  @param bLog YES will print log message on console.
+ */
++ (void)setWillPrintLog:(BOOL)bLog;
+
+/**
+ *  get the value of print log.
+ *
+ *  @return YES if you will print log.
+ */
++ (BOOL)getWillPrintLog;
+
 @end

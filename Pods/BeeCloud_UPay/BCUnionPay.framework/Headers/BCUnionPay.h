@@ -31,6 +31,7 @@ FOUNDATION_EXPORT const unsigned char BCUnionPayVersionString[];
  *  @param out_trade_no   商户系统内部的支付订单号,包含数字与字母,确保在商户系统中唯一
  *  @param total_fee      支付金额,以分为单位
  *  @param viewController 调起银联支付的页面
+ *  @param optional       扩展参数，可以传入任意数量的key/value对来补充对业务逻辑的需求
  *  @param block          接收支付结果回调
  */
 + (void)reqUnionPayment:(NSString *)trace_id
@@ -38,7 +39,7 @@ FOUNDATION_EXPORT const unsigned char BCUnionPayVersionString[];
              outTradeNo:(NSString *)out_trade_no
                totalFee:(NSString *)total_fee
          viewController:(UIViewController *)viewController
-               optional:(NSMutableDictionary *)optional
+               optional:(NSDictionary *)optional
                payblock:(BCPayBlock)block ;
 
 /**

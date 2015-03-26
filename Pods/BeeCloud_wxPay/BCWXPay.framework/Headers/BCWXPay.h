@@ -40,13 +40,14 @@ FOUNDATION_EXPORT const unsigned char BCWXPayVersionString[];
  *  @param wx_totalFee   支付金额,以分为单位
  *  @param wx_outTradeNo 商户系统内部的订单号,32个字符内、包含数字与字母,确保在商户系统中唯一
  *  @param wx_traceId    支付用户ID，必须保证在商户系统中唯一
+ *  @param optional      扩展参数，可以传入任意数量的key/value对来补充对业务逻辑的需求
  *  @param block         支付结果回调
  */
 + (void)reqWXPayment:(NSString *)wx_body
             totalFee:(NSString *)wx_totalFee
           outTradeNo:(NSString *)wx_outTradeNo
              traceID:(NSString *)wx_traceId
-            optional:(NSMutableDictionary *)optional
+            optional:(NSDictionary *)optional
             payBlock:(BCPayBlock)block;
 
 /**

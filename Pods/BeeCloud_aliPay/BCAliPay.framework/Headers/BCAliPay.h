@@ -34,6 +34,7 @@ FOUNDATION_EXPORT const unsigned char BCAliPayVersionString[];
  *  @param body         对一笔交易的具体描述信息。如果是多种商品,请将商品描 述字符串累加传给body
  *  @param total_fee    该笔订单的资金总额,单位为RMB-Yuan。取值范围为[0.01,100000000.00],精确到小数点后两位
  *  @param scheme       调用支付的app注册在info。plist中的scheme
+ *  @param optional     扩展参数，可以传入任意数量的key/value对来补充对业务逻辑的需求
  *  @param block        支付结果回调.strMsg=@"订单支付成功";//@"正在处理中";@"订单支付失败";@"用户中途取消";@"网络连接错误";
  */
 + (void)reqAliPayment:(NSString *)ali_trace_id
@@ -42,7 +43,7 @@ FOUNDATION_EXPORT const unsigned char BCAliPayVersionString[];
                  body:(NSString *)ali_body
              totalFee:(NSString *)ali_total_fee
                scheme:(NSString *)ali_scheme
-             optional:(NSMutableDictionary *)optional
+             optional:(NSDictionary *)optional
              payBlock:(BCPayBlock)block;
 
 /**
