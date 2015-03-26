@@ -1,8 +1,8 @@
 PODS:
-  - BeeCloud (2.4)
-  - BeeCloud_aliPay (2.4)
-  - BeeCloud_UPay (2.4)
-  - BeeCloud_wxPay (2.4)
+  - BeeCloud (2.4.1)
+  - BeeCloud_aliPay (2.4.1)
+  - BeeCloud_UPay (2.4.1)
+  - BeeCloud_wxPay (2.4.1)
 
 DEPENDENCIES:
   - BeeCloud (from `https://github.com/beecloud/ios-sdk-cocoapods-release.git`, branch `core`)
@@ -26,22 +26,22 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BeeCloud:
-    :commit: 09b3a4c8492c74ffe2b7a4a033c18b1ba8c1eaa0
+    :commit: 1d8e826bd79b8ab724f01c88bc999ccc49ddfbc6
     :git: https://github.com/beecloud/ios-sdk-cocoapods-release.git
   BeeCloud_aliPay:
-    :commit: 0e97eda9c36a0a6f525cc0b069a4260ff6bea419
+    :commit: 00de16e47f7c6aea16f5165b598e68be2f483071
     :git: https://github.com/beecloud/ios-sdk-cocoapods-release.git
   BeeCloud_UPay:
-    :commit: 7347f74c5460825f3594557b72b1ff9302d77759
+    :commit: d1933dd98785b7515c448c215e871ac41e550c54
     :git: https://github.com/beecloud/ios-sdk-cocoapods-release.git
   BeeCloud_wxPay:
-    :commit: 1da2c8f556bc6840efb06d04e67a8f4698dc5f75
+    :commit: 2b32119269113694f568940f7916b93f4e2cb144
     :git: https://github.com/beecloud/ios-sdk-cocoapods-release.git
 
 SPEC CHECKSUMS:
-  BeeCloud: f001fb3f8dc4721f7583f13d4de24c36a6f3d1e3
-  BeeCloud_aliPay: 05dabd840561462956155c1c2a2b903908f57c91
-  BeeCloud_UPay: 311573ee3e3cc74a7407c900117f6e41fbfcd2a1
-  BeeCloud_wxPay: 72dee05dbab535d8473d88b2ec21bdf91452b14f
+  BeeCloud: b37349102dea46a8a1e075e0b524c0b30d8ee422
+  BeeCloud_aliPay: 7559344f6b8a8a5caac4c6f565b09fac86c8a60b
+  BeeCloud_UPay: 9ff3fd6818ba06a5b08f957b7de314a0b1e2167a
+  BeeCloud_wxPay: 96e8ec96c15fa1d8a41cc7fec018c6831d18b572
 
 COCOAPODS: 0.36.0
