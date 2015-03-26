@@ -23,7 +23,7 @@
 /**
  *  BeeCloud SDK release version.
  */
-static NSString * const kBeeCloudVersionString = @"2.4";
+static NSString * const kBeeCloudVersionString = @"2.4.1";
 static double const kBeeCloudVersionNumber = 2.4;
 
 /**
