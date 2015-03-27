@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SuccessViewController.h"
 
 @interface ViewController (){
     NSString* _out_trade_no;
@@ -56,13 +57,10 @@
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"value",@"key", nil];
     [BCWXPay reqWXPayment:kBody totalFee:@"1" outTradeNo:outTradeNo traceID:kTraceID optional:dict payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
-        if (success) {
-            // 表明微信支付成功
-        } else {
+        if (error) {
             NSLog(@"%@",error.description);
             // 表明支付过程中出现错误，strMsg为错误原因
         }
-        [self showAlertView:strMsg];
 
         NSLog(@"%s strMsg = %@", __func__, strMsg);
     }];
@@ -150,7 +148,10 @@
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
     [BCUnionPay reqUnionPayment:kTraceID body:kBody outTradeNo:outTradeNo totalFee:@"1" viewController:self optional:dict payblock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
-            //
+            if(success){
+                SuccessViewController* successViewController = [[SuccessViewController alloc]init];
+                [self presentViewController:successViewController animated:YES completion:nil];
+            }
         }else{
             NSLog(@"UnionPay Faild:%@",error.description);
         }
