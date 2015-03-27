@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <BCAliPay/BCAliPay.h>
 #import <BCWXPay/BCWXPay.h>
+#import "SuccessViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,6 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    
     if (BCPayUrlWeChat == [BCUtil getUrlType:url]) {
         return [BCWXPay handleOpenUrl:url];
     } else if (BCPayUrlAlipay == [BCUtil getUrlType:url]) {

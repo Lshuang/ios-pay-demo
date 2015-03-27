@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SuccessViewController.h"
 
 @interface ViewController (){
     NSString* _out_trade_no;
@@ -57,12 +58,13 @@
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"value",@"key", nil];
     [BCWXPay reqWXPayment:kBody totalFee:@"1" outTradeNo:outTradeNo traceID:kTraceID optional:dict payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
-            // 表明微信支付成功
+            // 表明支付成功
         } else {
-            NSLog(@"%@",error.description);
             // 表明支付过程中出现错误，strMsg为错误原因
         }
         [self showAlertView:strMsg];
+        
+        if (error) NSLog(@"%s,%s,%d,%@", __FILE__, __func__, __LINE__, error);
     }];
 }
 
@@ -76,13 +78,13 @@
     NSLog(@"refund no = %@", outRefundNo);
     [BCWXPay reqWXRefund:outTradeNo outRefundNo:outRefundNo refundReason:kRefundReason refundFee:@"1" payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
-            // 退款申请成功
+            // 表明预退款成功
         } else {
-            // 退款失败，strMsg为错误原因
+            // 表明预退款过程中出现错误，strMsg为错误原因
         }
         [self showAlertView:strMsg];
-
-        NSLog(@"%s,%s,%d,%@", __FILE__, __func__, __LINE__, error);
+        
+        if (error) NSLog(@"%s,%s,%d,%@", __FILE__, __func__, __LINE__, error);
     }];
 }
 
@@ -100,11 +102,13 @@
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
     [BCAliPay reqAliPayment:kTraceID outTradeNo:outTradeNo subject:kBody body:kSubject totalFee:@"0.01" scheme:@"payTestDemo" optional:dict payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
-            // 表明支付宝支付成功
+            // 表明支付成功
         } else {
             // 表明支付过程中出现错误，strMsg为错误原因
         }
         [self showAlertView:strMsg];
+        
+        if (error) NSLog(@"%s,%s,%d,%@", __FILE__, __func__, __LINE__, error);
     }];
 }
 
@@ -123,12 +127,14 @@
     [formatter setDateFormat:@"yyyyMMddHHmmss"];
     NSString *dateString = [formatter stringFromDate:date];
     [BCAliPay reqAliRefund:out_trade_no refundNo:dateString refundFee:@"0.01" refundReason:@"不好吃" refundBlock:^(BOOL success, NSString *strMsg, NSError *error) {
-        if(success){
-            //
+        if (success) {
+            // 表明预退款成功
         } else {
-            
+            // 表明预退款过程中出现错误，strMsg为错误原因
         }
         [self showAlertView:strMsg];
+        
+        if (error) NSLog(@"%s,%s,%d,%@", __FILE__, __func__, __LINE__, error);
     }];
 }
 
@@ -144,7 +150,10 @@
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
     [BCUnionPay reqUnionPayment:kTraceID body:kBody outTradeNo:outTradeNo totalFee:@"1" viewController:self optional:dict payblock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
-            //
+            if(success){
+                SuccessViewController* successViewController = [[SuccessViewController alloc]init];
+                [self presentViewController:successViewController animated:YES completion:nil];
+            }
         }else{
             NSLog(@"UnionPay Faild:%@",error.description);
         }
