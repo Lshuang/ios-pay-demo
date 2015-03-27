@@ -31,7 +31,7 @@ FOUNDATION_EXPORT const unsigned char BCWXPayVersionString[];
  * @param block  支付结果回调 Block，保证跳转支付过程中，当app被kill掉时，能通过这个接口得到支付结果
  * @return 成功返回YES，失败返回NO。
  */
-+ (BOOL)handleOpenUrl:(NSURL *)url withBlock:(BCPayBlock)block;
++ (BOOL)handleOpenUrl:(NSURL *)url;
 
 /**
  *  微信支付调用接口.初始化wx_boby,wx_totalFee,wx_outTradeNo,wx_traceid后调用此接口发起微信支付，并跳转到微信。

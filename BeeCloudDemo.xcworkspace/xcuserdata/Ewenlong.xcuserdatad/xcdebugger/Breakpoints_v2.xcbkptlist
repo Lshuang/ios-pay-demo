@@ -17,36 +17,22 @@
             endingLineNumber = "59"
             landmarkName = "-wxPay"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[ViewController wxPay]"
-                  moduleName = "BeeCloudDemo"
-                  urlString = "file:///Users/Ewenlong/GitHub/ios-pay-demo/BeeCloudDemo/ViewController.m"
-                  timestampString = "448867244.173987"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "342">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__23-[ViewController wxPay]_block_invoke"
-                  moduleName = "BeeCloudDemo"
-                  urlString = "file:///Users/Ewenlong/GitHub/ios-pay-demo/BeeCloudDemo/ViewController.m"
-                  timestampString = "448867244.175629"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "59"
-                  endingLineNumber = "59"
-                  offsetFromSymbolStart = "56">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BeeCloudDemo/ViewController.m"
+            timestampString = "449117423.181802"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "-aliPay"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -23,7 +23,7 @@ FOUNDATION_EXPORT const unsigned char BCAliPayVersionString[];
 #pragma mark - AliPay Functions
 /** @name AliPay Functions */
 
-+ (BOOL)handleOpenUrl:(NSURL *)url withBlock:(BCPayBlock)block;
++ (BOOL)handleOpenUrl:(NSURL *)url;
 
 /**
  *  支付宝支付

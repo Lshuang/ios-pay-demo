@@ -63,8 +63,6 @@
             // 表明支付过程中出现错误，strMsg为错误原因
         }
         [self showAlertView:strMsg];
-
-        NSLog(@"%s strMsg = %@", __func__, strMsg);
     }];
 }
 
@@ -107,8 +105,6 @@
             // 表明支付过程中出现错误，strMsg为错误原因
         }
         [self showAlertView:strMsg];
-
-        NSLog(@"AliPay strMsg = %@", strMsg);
     }];
 }
 
@@ -133,8 +129,6 @@
             
         }
         [self showAlertView:strMsg];
-
-        NSLog(@"Msg:%@",strMsg);
     }];
 }
 
@@ -155,7 +149,6 @@
             NSLog(@"UnionPay Faild:%@",error.description);
         }
         [self showAlertView:strMsg];
-        NSLog(@"Msg:%@", strMsg);
     }];
 }
 
@@ -174,7 +167,6 @@
             NSLog(@"UnionRefund Faild:%@",error.description);
         }
         [self showAlertView:strMsg];
-        NSLog(@"Msg:%@", strMsg);
     }];
 }
 

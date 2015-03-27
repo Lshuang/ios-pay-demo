@@ -24,20 +24,13 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    
     if (BCPayUrlWeChat == [BCUtil getUrlType:url]) {
-        return [BCWXPay handleOpenUrl:url withBlock:^(BOOL success, NSString *strMsg, NSError *error) {
-            NSLog(@"strMsg = %@", strMsg);
-            UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:strMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            [alert show];
-        }];
+        return [BCWXPay handleOpenUrl:url];
     } else if (BCPayUrlAlipay == [BCUtil getUrlType:url]) {
-        return [BCAliPay handleOpenUrl:url withBlock:^(BOOL success, NSString *strMsg, NSError *error) {
-            NSLog(@"strMsg = %@", strMsg);
-            UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:strMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            [alert show];
-        }];
+        return [BCAliPay handleOpenUrl:url];
     } else {
-        //
+        //other url
     }
     return YES;
 }
