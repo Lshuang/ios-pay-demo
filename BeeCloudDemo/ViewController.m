@@ -140,7 +140,7 @@
 
 #pragma mark - 银联支付
 //  @param trace_id       支付用户ID，必须保证在商户系统中唯一.可通过trace_id查询订单详情。
-//  @param body           商品的标题/交易标题/订单标题/订单关键字等。该参数最长为128个汉字
+//  @param body           商品的标题/交易标题/订单标题/订单关键字等。该参数最长为32个汉字
 //  @param out_trade_no   商户系统内部的支付订单号,包含数字与字母,确保在商户系统中唯一
 //  @param total_fee      支付金额,以分为单位
 //  @param viewController 调起银联支付的页面,一般为self
@@ -148,7 +148,7 @@
 - (void)unionPay{
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"value",@"key", nil];
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    [BCUnionPay reqUnionPayment:kTraceID body:kBody outTradeNo:outTradeNo totalFee:@"1" viewController:self optional:dict payblock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCUnionPay reqUnionPayment:kTraceID body:[NSString stringWithFormat:@"%@",@"商户系统商户系统商户系统商户系统商"] outTradeNo:outTradeNo totalFee:@"1" viewController:self optional:dict payblock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             if(success){
                 SuccessViewController* successViewController = [[SuccessViewController alloc]init];
