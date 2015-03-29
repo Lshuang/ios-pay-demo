@@ -14,11 +14,11 @@
 		<string>https://github.com/beecloud/ios-pay-demo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>BeeCloudDemo.xcworkspace</string>
+	<string>ios-pay-demo/BeeCloudDemo.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>437CACC3A701B4D8834453EAA7EBA8C8BCAAF535</key>
-		<string>..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/beecloud/ios-pay-demo.git</string>
