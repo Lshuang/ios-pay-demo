@@ -1,6 +1,0 @@
-framework module BCUnionPay {
-  umbrella header "BCUnionPay.h"
-
-  export *
-  module * { export * }
-}

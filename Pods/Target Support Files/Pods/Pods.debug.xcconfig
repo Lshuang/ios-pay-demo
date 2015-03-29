@@ -1,7 +1,0 @@
-FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/BeeCloud" "$(PODS_ROOT)/BeeCloud_UPay" "$(PODS_ROOT)/BeeCloud_aliPay" "$(PODS_ROOT)/BeeCloud_aliPay" "$(PODS_ROOT)/BeeCloud_wxPay"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BeeCloud" "${PODS_ROOT}/Headers/Public/BeeCloud_UPay" "${PODS_ROOT}/Headers/Public/BeeCloud_aliPay" "${PODS_ROOT}/Headers/Public/BeeCloud_wxPay"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BeeCloud" -isystem "${PODS_ROOT}/Headers/Public/BeeCloud_UPay" -isystem "${PODS_ROOT}/Headers/Public/BeeCloud_aliPay" -isystem "${PODS_ROOT}/Headers/Public/BeeCloud_wxPay"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"sqlite3" -l"z" -framework "AlipaySDK" -framework "BCAliPay" -framework "BCUnionPay" -framework "BCWXPay" -framework "BeeCloud" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreTelephony" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
-OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
-PODS_ROOT = ${SRCROOT}/Pods
