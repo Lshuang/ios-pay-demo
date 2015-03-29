@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import <BCAliPay/BCAliPay.h>
 #import <BCWXPay/BCWXPay.h>
-#import "SuccessViewController.h"
 
 @interface AppDelegate ()
 

@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		83E83E3E0F301151EEA2612B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A768EA49BF4BC86A0A6382F1 /* libPods.a */; };
-		A8AE9E041AC41287007EE9D4 /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AE9E021AC41287007EE9D4 /* SuccessViewController.m */; };
-		A8AE9E051AC41287007EE9D4 /* SuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8AE9E031AC41287007EE9D4 /* SuccessViewController.xib */; };
 		A8C209031A83924E0060DAE7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C209021A83924E0060DAE7 /* main.m */; };
 		A8C209061A83924E0060DAE7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C209051A83924E0060DAE7 /* AppDelegate.m */; };
 		A8C209091A83924E0060DAE7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C209081A83924E0060DAE7 /* ViewController.m */; };
@@ -33,9 +31,6 @@
 		2DFAF0A9BFC1F4F2F1A4F447 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6E05B4F64A105F3A4464E9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A768EA49BF4BC86A0A6382F1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8AE9E011AC41287007EE9D4 /* SuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuccessViewController.h; path = ../SuccessViewController.h; sourceTree = "<group>"; };
-		A8AE9E021AC41287007EE9D4 /* SuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuccessViewController.m; path = ../SuccessViewController.m; sourceTree = "<group>"; };
-		A8AE9E031AC41287007EE9D4 /* SuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SuccessViewController.xib; path = ../SuccessViewController.xib; sourceTree = "<group>"; };
 		A8C208FD1A83924E0060DAE7 /* BeeCloudDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeCloudDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C209011A83924E0060DAE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8C209021A83924E0060DAE7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -112,9 +107,6 @@
 			children = (
 				A8C209041A83924E0060DAE7 /* AppDelegate.h */,
 				A8C209051A83924E0060DAE7 /* AppDelegate.m */,
-				A8AE9E011AC41287007EE9D4 /* SuccessViewController.h */,
-				A8AE9E021AC41287007EE9D4 /* SuccessViewController.m */,
-				A8AE9E031AC41287007EE9D4 /* SuccessViewController.xib */,
 				A8C209071A83924E0060DAE7 /* ViewController.h */,
 				A8C209081A83924E0060DAE7 /* ViewController.m */,
 				A8C2090A1A83924E0060DAE7 /* Main.storyboard */,
@@ -235,7 +227,6 @@
 			files = (
 				A8C2090C1A83924E0060DAE7 /* Main.storyboard in Resources */,
 				A8C209111A83924E0060DAE7 /* LaunchScreen.xib in Resources */,
-				A8AE9E051AC41287007EE9D4 /* SuccessViewController.xib in Resources */,
 				A8C2090E1A83924E0060DAE7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +280,6 @@
 			files = (
 				A8C209091A83924E0060DAE7 /* ViewController.m in Sources */,
 				A8C209061A83924E0060DAE7 /* AppDelegate.m in Sources */,
-				A8AE9E041AC41287007EE9D4 /* SuccessViewController.m in Sources */,
 				A8C209031A83924E0060DAE7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

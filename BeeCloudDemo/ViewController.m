@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "SuccessViewController.h"
 
 @interface ViewController (){
     NSString* _out_trade_no;
@@ -151,8 +150,7 @@
     [BCUnionPay reqUnionPayment:kTraceID body:[NSString stringWithFormat:@"%@",@"商户系统商户系统商户系统商户系统商"] outTradeNo:outTradeNo totalFee:@"1" viewController:self optional:dict payblock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             if(success){
-                SuccessViewController* successViewController = [[SuccessViewController alloc]init];
-                [self presentViewController:successViewController animated:YES completion:nil];
+                //
             }
         }else{
             NSLog(@"UnionPay Faild:%@",error.description);
