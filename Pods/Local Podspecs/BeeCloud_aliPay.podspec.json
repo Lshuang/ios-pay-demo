@@ -1,0 +1,39 @@
+{
+  "name": "BeeCloud_aliPay",
+  "version": "2.4.2",
+  "summary": "BeeCloud云服务 致力加速App 开发",
+  "homepage": "http://beecloud.cn",
+  "license": {
+    "type": "Copyright",
+    "text": "Copyright © 2014 比可网络"
+  },
+  "authors": "http://beecloud.cn",
+  "platforms": {
+    "ios": null
+  },
+  "source": {
+    "http": "http://beecloud.cn/download/file/BeeCloud.framework.zip"
+  },
+  "frameworks": [
+    "CoreGraphics",
+    "CoreLocation",
+    "MobileCoreServices",
+    "Security",
+    "SystemConfiguration",
+    "UIKit",
+    "CoreTelephony"
+  ],
+  "vendored_frameworks": [
+    "BCAliPay.framework",
+    "AlipaySDK.framework"
+  ],
+  "libraries": [
+    "sqlite3",
+    "c++",
+    "z"
+  ],
+  "requires_arc": true,
+  "xcconfig": {
+    "OTHER_LDFLAGS": "-ObjC"
+  }
+}
