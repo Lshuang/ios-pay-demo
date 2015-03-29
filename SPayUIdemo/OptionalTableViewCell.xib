@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OptionalTableViewCell" id="KGk-i7-Jjw" customClass="OptionalTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXD-Ss-4J2">
+                        <rect key="frame" x="8" y="1" width="212" height="44"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ks-69-gKF">
+                        <rect key="frame" x="228" y="1" width="84" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="84" id="zTF-z8-9YL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="cXD-Ss-4J2" secondAttribute="bottom" constant="-10" id="MP6-U3-XtT"/>
+                    <constraint firstItem="cXD-Ss-4J2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-7" id="ObK-vR-h6p"/>
+                    <constraint firstItem="cXD-Ss-4J2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="TA0-sV-P8M"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="0Ks-69-gKF" secondAttribute="bottom" constant="-9" id="Wml-jq-ON3"/>
+                    <constraint firstItem="0Ks-69-gKF" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="avc-Gi-kFr"/>
+                    <constraint firstItem="cXD-Ss-4J2" firstAttribute="firstBaseline" secondItem="0Ks-69-gKF" secondAttribute="firstBaseline" id="dov-CS-cqc"/>
+                    <constraint firstItem="0Ks-69-gKF" firstAttribute="leading" secondItem="cXD-Ss-4J2" secondAttribute="trailing" constant="8" symbolic="YES" id="sLv-rB-SkN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="KeyLabel" destination="cXD-Ss-4J2" id="2gn-ya-fyK"/>
+                <outlet property="ValueLabel" destination="0Ks-69-gKF" id="e7f-Ce-35v"/>
+            </connections>
+            <point key="canvasLocation" x="573" y="366"/>
+        </tableViewCell>
+    </objects>
+</document>

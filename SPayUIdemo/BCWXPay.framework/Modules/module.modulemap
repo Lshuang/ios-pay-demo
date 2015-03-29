@@ -1,0 +1,6 @@
+framework module BCWXPay {
+  umbrella header "BCWXPay.h"
+
+  export *
+  module * { export * }
+}

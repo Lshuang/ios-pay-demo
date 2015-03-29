@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A89785511AC5398100466E0F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A89785501AC5398000466E0F /* libc++.dylib */; };
+		A89785531AC539A400466E0F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A89785521AC539A400466E0F /* libz.dylib */; };
+		A89785551AC539B500466E0F /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A89785541AC539B500466E0F /* libsqlite3.0.dylib */; };
+		A8ACA4FA1AC258640087B0EB /* CheckOutProcess.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8ACA4F91AC258640087B0EB /* CheckOutProcess.storyboard */; };
+		A8ACA4FD1AC25D950087B0EB /* ConfirmTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ACA4FC1AC25D950087B0EB /* ConfirmTableViewCell.m */; };
+		A8ACA5011AC25F810087B0EB /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8ACA5001AC25F810087B0EB /* ConfirmViewController.m */; };
+		A8AE9DF41AC3ADAE007EE9D4 /* OptionalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AE9DF21AC3ADAE007EE9D4 /* OptionalTableViewCell.m */; };
+		A8AE9DF51AC3ADAE007EE9D4 /* OptionalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8AE9DF31AC3ADAE007EE9D4 /* OptionalTableViewCell.xib */; };
+		A8AE9DF81AC3B14A007EE9D4 /* Optional.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AE9DF71AC3B14A007EE9D4 /* Optional.m */; };
+		A8AEE0151AC0FD270025BCEC /* ShoppingCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE0141AC0FD270025BCEC /* ShoppingCartTableViewCell.m */; };
+		A8AEE0181AC1000B0025BCEC /* ShoppingCartTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE0171AC1000B0025BCEC /* ShoppingCartTableViewController.m */; };
+		A8AEE01E1AC105AE0025BCEC /* Goods.m in Sources */ = {isa = PBXBuildFile; fileRef = A8AEE01D1AC105AE0025BCEC /* Goods.m */; };
+		A8B0ACF31AC05EAD009CC9E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0ACF21AC05EAD009CC9E0 /* main.m */; };
+		A8B0ACF61AC05EAD009CC9E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0ACF51AC05EAD009CC9E0 /* AppDelegate.m */; };
+		A8B0ACFC1AC05EAD009CC9E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8B0ACFA1AC05EAD009CC9E0 /* Main.storyboard */; };
+		A8B0ACFE1AC05EAD009CC9E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8B0ACFD1AC05EAD009CC9E0 /* Images.xcassets */; };
+		A8B0AD011AC05EAD009CC9E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B0ACFF1AC05EAD009CC9E0 /* LaunchScreen.xib */; };
+		A8B0AD0D1AC05EAD009CC9E0 /* SPayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B0AD0C1AC05EAD009CC9E0 /* SPayUITests.m */; };
+		A8B33A4D1AC69240001E1AA8 /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B33A4C1AC69240001E1AA8 /* SuccessViewController.m */; };
+		A8B5140C1AC52621009C11AE /* BCAliPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F21AC52592009C11AE /* BCAliPay.framework */; };
+		A8B5140D1AC52621009C11AE /* BCUnionPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F31AC52592009C11AE /* BCUnionPay.framework */; };
+		A8B5140E1AC52621009C11AE /* BCWXPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F41AC52592009C11AE /* BCWXPay.framework */; };
+		A8B5140F1AC52621009C11AE /* BeeCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F51AC52592009C11AE /* BeeCloud.framework */; };
+		A8B514101AC52629009C11AE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B514091AC525E9009C11AE /* CoreTelephony.framework */; };
+		A8B514111AC52629009C11AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B514071AC525E1009C11AE /* UIKit.framework */; };
+		A8B514121AC52629009C11AE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B514051AC525DA009C11AE /* SystemConfiguration.framework */; };
+		A8B514131AC52629009C11AE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B514031AC525D1009C11AE /* Security.framework */; };
+		A8B514141AC52629009C11AE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B514011AC525C9009C11AE /* MobileCoreServices.framework */; };
+		A8B514151AC52629009C11AE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513FF1AC525BF009C11AE /* CoreLocation.framework */; };
+		A8B514161AC52629009C11AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513FD1AC525B6009C11AE /* CoreGraphics.framework */; };
+		A8B514171AC52629009C11AE /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F71AC52592009C11AE /* AlipaySDK.framework */; };
+		A8B5141A1AC529F7009C11AE /* CustomInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B514191AC529F7009C11AE /* CustomInfo.m */; };
+		A8FFA5901AC4FD7500A01672 /* CheckOutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FFA58F1AC4FD7500A01672 /* CheckOutTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A8B0AD071AC05EAD009CC9E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8B0ACE51AC05EAD009CC9E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8B0ACEC1AC05EAD009CC9E0;
+			remoteInfo = SPayUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A89785501AC5398000466E0F /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		A89785521AC539A400466E0F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A89785541AC539B500466E0F /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		A8ACA4F91AC258640087B0EB /* CheckOutProcess.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CheckOutProcess.storyboard; path = SPayUI/CheckOutProcess.storyboard; sourceTree = "<group>"; };
+		A8ACA4FB1AC25D950087B0EB /* ConfirmTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmTableViewCell.h; sourceTree = "<group>"; };
+		A8ACA4FC1AC25D950087B0EB /* ConfirmTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmTableViewCell.m; sourceTree = "<group>"; };
+		A8ACA4FF1AC25F810087B0EB /* ConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ConfirmViewController.h; path = SPayUI/ConfirmViewController.h; sourceTree = "<group>"; };
+		A8ACA5001AC25F810087B0EB /* ConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfirmViewController.m; path = SPayUI/ConfirmViewController.m; sourceTree = "<group>"; };
+		A8AE9DF11AC3ADAE007EE9D4 /* OptionalTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionalTableViewCell.h; sourceTree = "<group>"; };
+		A8AE9DF21AC3ADAE007EE9D4 /* OptionalTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OptionalTableViewCell.m; sourceTree = "<group>"; };
+		A8AE9DF31AC3ADAE007EE9D4 /* OptionalTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OptionalTableViewCell.xib; sourceTree = "<group>"; };
+		A8AE9DF61AC3B14A007EE9D4 /* Optional.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Optional.h; sourceTree = "<group>"; };
+		A8AE9DF71AC3B14A007EE9D4 /* Optional.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Optional.m; sourceTree = "<group>"; };
+		A8AEE0131AC0FD270025BCEC /* ShoppingCartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartTableViewCell.h; sourceTree = "<group>"; };
+		A8AEE0141AC0FD270025BCEC /* ShoppingCartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartTableViewCell.m; sourceTree = "<group>"; };
+		A8AEE0161AC1000B0025BCEC /* ShoppingCartTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartTableViewController.h; sourceTree = "<group>"; };
+		A8AEE0171AC1000B0025BCEC /* ShoppingCartTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartTableViewController.m; sourceTree = "<group>"; };
+		A8AEE01C1AC105AE0025BCEC /* Goods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goods.h; sourceTree = "<group>"; };
+		A8AEE01D1AC105AE0025BCEC /* Goods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goods.m; sourceTree = "<group>"; };
+		A8B0ACED1AC05EAD009CC9E0 /* SPayUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPayUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B0ACF11AC05EAD009CC9E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8B0ACF21AC05EAD009CC9E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A8B0ACF41AC05EAD009CC9E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A8B0ACF51AC05EAD009CC9E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A8B0ACFB1AC05EAD009CC9E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A8B0ACFD1AC05EAD009CC9E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A8B0AD001AC05EAD009CC9E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A8B0AD061AC05EAD009CC9E0 /* SPayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8B0AD0B1AC05EAD009CC9E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8B0AD0C1AC05EAD009CC9E0 /* SPayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPayUITests.m; sourceTree = "<group>"; };
+		A8B33A4B1AC69240001E1AA8 /* SuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessViewController.h; sourceTree = "<group>"; };
+		A8B33A4C1AC69240001E1AA8 /* SuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessViewController.m; sourceTree = "<group>"; };
+		A8B513F21AC52592009C11AE /* BCAliPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BCAliPay.framework; sourceTree = "<group>"; };
+		A8B513F31AC52592009C11AE /* BCUnionPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BCUnionPay.framework; sourceTree = "<group>"; };
+		A8B513F41AC52592009C11AE /* BCWXPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BCWXPay.framework; sourceTree = "<group>"; };
+		A8B513F51AC52592009C11AE /* BeeCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BeeCloud.framework; sourceTree = "<group>"; };
+		A8B513F71AC52592009C11AE /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
+		A8B513FD1AC525B6009C11AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A8B513FF1AC525BF009C11AE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A8B514011AC525C9009C11AE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A8B514031AC525D1009C11AE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A8B514051AC525DA009C11AE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A8B514071AC525E1009C11AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A8B514091AC525E9009C11AE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A8B514181AC529F7009C11AE /* CustomInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInfo.h; sourceTree = "<group>"; };
+		A8B514191AC529F7009C11AE /* CustomInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInfo.m; sourceTree = "<group>"; };
+		A8FFA58E1AC4FD7500A01672 /* CheckOutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckOutTableViewController.h; sourceTree = "<group>"; };
+		A8FFA58F1AC4FD7500A01672 /* CheckOutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckOutTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8B0ACEA1AC05EAD009CC9E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A89785551AC539B500466E0F /* libsqlite3.0.dylib in Frameworks */,
+				A89785531AC539A400466E0F /* libz.dylib in Frameworks */,
+				A89785511AC5398100466E0F /* libc++.dylib in Frameworks */,
+				A8B5140C1AC52621009C11AE /* BCAliPay.framework in Frameworks */,
+				A8B5140D1AC52621009C11AE /* BCUnionPay.framework in Frameworks */,
+				A8B5140E1AC52621009C11AE /* BCWXPay.framework in Frameworks */,
+				A8B5140F1AC52621009C11AE /* BeeCloud.framework in Frameworks */,
+				A8B514101AC52629009C11AE /* CoreTelephony.framework in Frameworks */,
+				A8B514111AC52629009C11AE /* UIKit.framework in Frameworks */,
+				A8B514121AC52629009C11AE /* SystemConfiguration.framework in Frameworks */,
+				A8B514131AC52629009C11AE /* Security.framework in Frameworks */,
+				A8B514141AC52629009C11AE /* MobileCoreServices.framework in Frameworks */,
+				A8B514151AC52629009C11AE /* CoreLocation.framework in Frameworks */,
+				A8B514161AC52629009C11AE /* CoreGraphics.framework in Frameworks */,
+				A8B514171AC52629009C11AE /* AlipaySDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B0AD031AC05EAD009CC9E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A8ACA4FE1AC25E0C0087B0EB /* SPayUISDK */ = {
+			isa = PBXGroup;
+			children = (
+				A8B5141B1AC52C0E009C11AE /* Model */,
+				A8FFA58E1AC4FD7500A01672 /* CheckOutTableViewController.h */,
+				A8FFA58F1AC4FD7500A01672 /* CheckOutTableViewController.m */,
+				A8B33A4B1AC69240001E1AA8 /* SuccessViewController.h */,
+				A8B33A4C1AC69240001E1AA8 /* SuccessViewController.m */,
+				A8AE9DF11AC3ADAE007EE9D4 /* OptionalTableViewCell.h */,
+				A8AE9DF21AC3ADAE007EE9D4 /* OptionalTableViewCell.m */,
+				A8AE9DF31AC3ADAE007EE9D4 /* OptionalTableViewCell.xib */,
+				A8ACA4FB1AC25D950087B0EB /* ConfirmTableViewCell.h */,
+				A8ACA4FC1AC25D950087B0EB /* ConfirmTableViewCell.m */,
+				A8ACA4FF1AC25F810087B0EB /* ConfirmViewController.h */,
+				A8ACA5001AC25F810087B0EB /* ConfirmViewController.m */,
+				A8ACA4F91AC258640087B0EB /* CheckOutProcess.storyboard */,
+			);
+			name = SPayUISDK;
+			sourceTree = "<group>";
+		};
+		A8B0ACE41AC05EAD009CC9E0 = {
+			isa = PBXGroup;
+			children = (
+				A8ACA4FE1AC25E0C0087B0EB /* SPayUISDK */,
+				A8B0ACEF1AC05EAD009CC9E0 /* SPayUI */,
+				A8B0AD091AC05EAD009CC9E0 /* SPayUITests */,
+				A8B0ACEE1AC05EAD009CC9E0 /* Products */,
+				A8B5140B1AC52600009C11AE /* Framework */,
+			);
+			sourceTree = "<group>";
+		};
+		A8B0ACEE1AC05EAD009CC9E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A8B0ACED1AC05EAD009CC9E0 /* SPayUI.app */,
+				A8B0AD061AC05EAD009CC9E0 /* SPayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A8B0ACEF1AC05EAD009CC9E0 /* SPayUI */ = {
+			isa = PBXGroup;
+			children = (
+				A8B0ACFA1AC05EAD009CC9E0 /* Main.storyboard */,
+				A8AEE0161AC1000B0025BCEC /* ShoppingCartTableViewController.h */,
+				A8AEE0171AC1000B0025BCEC /* ShoppingCartTableViewController.m */,
+				A8AEE0131AC0FD270025BCEC /* ShoppingCartTableViewCell.h */,
+				A8AEE0141AC0FD270025BCEC /* ShoppingCartTableViewCell.m */,
+				A8B0ACF01AC05EAD009CC9E0 /* Supporting Files */,
+			);
+			path = SPayUI;
+			sourceTree = "<group>";
+		};
+		A8B0ACF01AC05EAD009CC9E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8B0ACFD1AC05EAD009CC9E0 /* Images.xcassets */,
+				A8B0ACFF1AC05EAD009CC9E0 /* LaunchScreen.xib */,
+				A8B0ACF41AC05EAD009CC9E0 /* AppDelegate.h */,
+				A8B0ACF51AC05EAD009CC9E0 /* AppDelegate.m */,
+				A8B0ACF11AC05EAD009CC9E0 /* Info.plist */,
+				A8B0ACF21AC05EAD009CC9E0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8B0AD091AC05EAD009CC9E0 /* SPayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A8B0AD0C1AC05EAD009CC9E0 /* SPayUITests.m */,
+				A8B0AD0A1AC05EAD009CC9E0 /* Supporting Files */,
+			);
+			path = SPayUITests;
+			sourceTree = "<group>";
+		};
+		A8B0AD0A1AC05EAD009CC9E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8B0AD0B1AC05EAD009CC9E0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A8B513F61AC52592009C11AE /* dependency */ = {
+			isa = PBXGroup;
+			children = (
+				A8B514091AC525E9009C11AE /* CoreTelephony.framework */,
+				A8B514071AC525E1009C11AE /* UIKit.framework */,
+				A8B514051AC525DA009C11AE /* SystemConfiguration.framework */,
+				A8B514031AC525D1009C11AE /* Security.framework */,
+				A8B514011AC525C9009C11AE /* MobileCoreServices.framework */,
+				A8B513FF1AC525BF009C11AE /* CoreLocation.framework */,
+				A8B513FD1AC525B6009C11AE /* CoreGraphics.framework */,
+				A8B513F71AC52592009C11AE /* AlipaySDK.framework */,
+			);
+			path = dependency;
+			sourceTree = "<group>";
+		};
+		A8B5140B1AC52600009C11AE /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				A89785541AC539B500466E0F /* libsqlite3.0.dylib */,
+				A89785521AC539A400466E0F /* libz.dylib */,
+				A89785501AC5398000466E0F /* libc++.dylib */,
+				A8B513F21AC52592009C11AE /* BCAliPay.framework */,
+				A8B513F31AC52592009C11AE /* BCUnionPay.framework */,
+				A8B513F41AC52592009C11AE /* BCWXPay.framework */,
+				A8B513F51AC52592009C11AE /* BeeCloud.framework */,
+				A8B513F61AC52592009C11AE /* dependency */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		A8B5141B1AC52C0E009C11AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8AE9DF61AC3B14A007EE9D4 /* Optional.h */,
+				A8AE9DF71AC3B14A007EE9D4 /* Optional.m */,
+				A8AEE01C1AC105AE0025BCEC /* Goods.h */,
+				A8AEE01D1AC105AE0025BCEC /* Goods.m */,
+				A8B514181AC529F7009C11AE /* CustomInfo.h */,
+				A8B514191AC529F7009C11AE /* CustomInfo.m */,
+			);
+			name = Model;
+			path = SPayUI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A8B0ACEC1AC05EAD009CC9E0 /* SPayUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8B0AD101AC05EAD009CC9E0 /* Build configuration list for PBXNativeTarget "SPayUI" */;
+			buildPhases = (
+				A8B0ACE91AC05EAD009CC9E0 /* Sources */,
+				A8B0ACEA1AC05EAD009CC9E0 /* Frameworks */,
+				A8B0ACEB1AC05EAD009CC9E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SPayUI;
+			productName = SPayUI;
+			productReference = A8B0ACED1AC05EAD009CC9E0 /* SPayUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A8B0AD051AC05EAD009CC9E0 /* SPayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8B0AD131AC05EAD009CC9E0 /* Build configuration list for PBXNativeTarget "SPayUITests" */;
+			buildPhases = (
+				A8B0AD021AC05EAD009CC9E0 /* Sources */,
+				A8B0AD031AC05EAD009CC9E0 /* Frameworks */,
+				A8B0AD041AC05EAD009CC9E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A8B0AD081AC05EAD009CC9E0 /* PBXTargetDependency */,
+			);
+			name = SPayUITests;
+			productName = SPayUITests;
+			productReference = A8B0AD061AC05EAD009CC9E0 /* SPayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A8B0ACE51AC05EAD009CC9E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = BeeCloud;
+				TargetAttributes = {
+					A8B0ACEC1AC05EAD009CC9E0 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					A8B0AD051AC05EAD009CC9E0 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = A8B0ACEC1AC05EAD009CC9E0;
+					};
+				};
+			};
+			buildConfigurationList = A8B0ACE81AC05EAD009CC9E0 /* Build configuration list for PBXProject "SPayUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A8B0ACE41AC05EAD009CC9E0;
+			productRefGroup = A8B0ACEE1AC05EAD009CC9E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A8B0ACEC1AC05EAD009CC9E0 /* SPayUI */,
+				A8B0AD051AC05EAD009CC9E0 /* SPayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A8B0ACEB1AC05EAD009CC9E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B0ACFC1AC05EAD009CC9E0 /* Main.storyboard in Resources */,
+				A8B0AD011AC05EAD009CC9E0 /* LaunchScreen.xib in Resources */,
+				A8AE9DF51AC3ADAE007EE9D4 /* OptionalTableViewCell.xib in Resources */,
+				A8B0ACFE1AC05EAD009CC9E0 /* Images.xcassets in Resources */,
+				A8ACA4FA1AC258640087B0EB /* CheckOutProcess.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B0AD041AC05EAD009CC9E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A8B0ACE91AC05EAD009CC9E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B0ACF61AC05EAD009CC9E0 /* AppDelegate.m in Sources */,
+				A8ACA5011AC25F810087B0EB /* ConfirmViewController.m in Sources */,
+				A8B0ACF31AC05EAD009CC9E0 /* main.m in Sources */,
+				A8AE9DF41AC3ADAE007EE9D4 /* OptionalTableViewCell.m in Sources */,
+				A8AEE01E1AC105AE0025BCEC /* Goods.m in Sources */,
+				A8B5141A1AC529F7009C11AE /* CustomInfo.m in Sources */,
+				A8ACA4FD1AC25D950087B0EB /* ConfirmTableViewCell.m in Sources */,
+				A8AE9DF81AC3B14A007EE9D4 /* Optional.m in Sources */,
+				A8AEE0181AC1000B0025BCEC /* ShoppingCartTableViewController.m in Sources */,
+				A8AEE0151AC0FD270025BCEC /* ShoppingCartTableViewCell.m in Sources */,
+				A8B33A4D1AC69240001E1AA8 /* SuccessViewController.m in Sources */,
+				A8FFA5901AC4FD7500A01672 /* CheckOutTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8B0AD021AC05EAD009CC9E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B0AD0D1AC05EAD009CC9E0 /* SPayUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A8B0AD081AC05EAD009CC9E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8B0ACEC1AC05EAD009CC9E0 /* SPayUI */;
+			targetProxy = A8B0AD071AC05EAD009CC9E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A8B0ACFA1AC05EAD009CC9E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8B0ACFB1AC05EAD009CC9E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A8B0ACFF1AC05EAD009CC9E0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A8B0AD001AC05EAD009CC9E0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A8B0AD0E1AC05EAD009CC9E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A8B0AD0F1AC05EAD009CC9E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A8B0AD111AC05EAD009CC9E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/dependency",
+				);
+				INFOPLIST_FILE = SPayUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A8B0AD121AC05EAD009CC9E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/dependency",
+				);
+				INFOPLIST_FILE = SPayUI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A8B0AD141AC05EAD009CC9E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SPayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SPayUI.app/SPayUI";
+			};
+			name = Debug;
+		};
+		A8B0AD151AC05EAD009CC9E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SPayUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SPayUI.app/SPayUI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A8B0ACE81AC05EAD009CC9E0 /* Build configuration list for PBXProject "SPayUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B0AD0E1AC05EAD009CC9E0 /* Debug */,
+				A8B0AD0F1AC05EAD009CC9E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8B0AD101AC05EAD009CC9E0 /* Build configuration list for PBXNativeTarget "SPayUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B0AD111AC05EAD009CC9E0 /* Debug */,
+				A8B0AD121AC05EAD009CC9E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A8B0AD131AC05EAD009CC9E0 /* Build configuration list for PBXNativeTarget "SPayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B0AD141AC05EAD009CC9E0 /* Debug */,
+				A8B0AD151AC05EAD009CC9E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A8B0ACE51AC05EAD009CC9E0 /* Project object */;
+}
