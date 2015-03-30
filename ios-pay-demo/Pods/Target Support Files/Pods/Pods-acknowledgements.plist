@@ -14,7 +14,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright © 2014 比可网络</string>
+			<string>Copyright &#169; 2014 &#27604;&#21487;&#32593;&#32476;</string>
 			<key>Title</key>
 			<string>BeeCloud</string>
 			<key>Type</key>
@@ -22,7 +22,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright © 2014 比可网络</string>
+			<string>Copyright &#169; 2014 &#27604;&#21487;&#32593;&#32476;</string>
 			<key>Title</key>
 			<string>BeeCloud_UPay</string>
 			<key>Type</key>
@@ -30,7 +30,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright © 2014 比可网络</string>
+			<string>Copyright &#169; 2014 &#27604;&#21487;&#32593;&#32476;</string>
 			<key>Title</key>
 			<string>BeeCloud_aliPay</string>
 			<key>Type</key>
@@ -38,7 +38,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright © 2014 比可网络</string>
+			<string>Copyright &#169; 2014 &#27604;&#21487;&#32593;&#32476;</string>
 			<key>Title</key>
 			<string>BeeCloud_wxPay</string>
 			<key>Type</key>
