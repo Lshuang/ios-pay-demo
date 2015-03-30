@@ -16,24 +16,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.addressLabel.layer.borderColor= [UIColor greenColor].CGColor;
-    self.addressLabel.layer.borderWidth = 1;
+    
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.97 green:0.97 blue:0.97 alpha:1];
     
-    UIView *confirmView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-80, self.view.frame.size.width, 80)];
-    confirmView.backgroundColor = [UIColor orangeColor];
+    UIView *confirmView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-40, self.view.frame.size.width, 40)];
+    confirmView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:confirmView];
     
-    UILabel *totalCostLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, confirmView.frame.size.height/2-20, confirmView.frame.size.width-10-85, 40)];
+    UILabel *totalCostLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, confirmView.frame.size.width-10-80, 40)];
     totalCostLabel.text = [NSString stringWithFormat:@"总价：%.2f",self.totalCost];
+    totalCostLabel.textColor = [UIColor whiteColor];
     [confirmView addSubview:totalCostLabel];
     
-    UIView* addressView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-80-40, self.view.frame.size.width, 40)];
-    [self.view addSubview:addressView];
+//    UIView* addressView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-40-40, self.view.frame.size.width, 40)];
+//    [self.view addSubview:addressView];
     
-    UIButton* confirmButton = [[UIButton alloc]initWithFrame:CGRectMake(confirmView.frame.size.width-80-5, confirmView.frame.size.height/2-20, 80, 40)];
+    UIButton* confirmButton = [[UIButton alloc]initWithFrame:CGRectMake(confirmView.frame.size.width-80, confirmView.frame.size.height/2-20, 80, 40)];
     [confirmButton setTitle:@"付款" forState:UIControlStateNormal];
     [confirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     confirmButton.backgroundColor = [UIColor redColor];
@@ -74,6 +79,7 @@
         checkOutProcessTableViewCell.goodPrice.text = good.goodPrice;
         checkOutProcessTableViewCell.goodCount.text = [NSString stringWithFormat:@"x%d",good.count];
         checkOutProcessTableViewCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         return checkOutProcessTableViewCell;
     }else{
 
@@ -83,6 +89,7 @@
         optionalTableViewCell.KeyLabel.text = optional.key;
         optionalTableViewCell.ValueLabel.text = optional.value;
         optionalTableViewCell.selectionStyle = UITableViewCellSelectionStyleNone;
+        optionalTableViewCell.backgroundColor = [UIColor colorWithRed:0.97 green:0.97 blue:0.97 alpha:1];
         
         return optionalTableViewCell;
     }

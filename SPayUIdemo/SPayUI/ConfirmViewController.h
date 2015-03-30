@@ -16,7 +16,6 @@
 
 @interface ConfirmViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UIActionSheetDelegate>
 
-@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSMutableArray* checkoutData;

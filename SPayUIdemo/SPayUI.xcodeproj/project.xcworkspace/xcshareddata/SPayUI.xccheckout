@@ -10,31 +10,31 @@
 	<string>SPayUI</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>EE601C2A673E2BDD4DC01951FDEACCA004CBA873</key>
-		<string>https://github.com/lacusrinz/SPayUI.git</string>
+		<key>437CACC3A701B4D8834453EAA7EBA8C8BCAAF535</key>
+		<string>https://github.com/beecloud/ios-pay-demo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SPayUI.xcodeproj</string>
+	<string>SPayUIdemo/SPayUI.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>EE601C2A673E2BDD4DC01951FDEACCA004CBA873</key>
-		<string>../..</string>
+		<key>437CACC3A701B4D8834453EAA7EBA8C8BCAAF535</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/lacusrinz/SPayUI.git</string>
+	<string>https://github.com/beecloud/ios-pay-demo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>EE601C2A673E2BDD4DC01951FDEACCA004CBA873</string>
+	<string>437CACC3A701B4D8834453EAA7EBA8C8BCAAF535</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>EE601C2A673E2BDD4DC01951FDEACCA004CBA873</string>
+			<string>437CACC3A701B4D8834453EAA7EBA8C8BCAAF535</string>
 			<key>IDESourceControlWCCName</key>
-			<string>SPayUI</string>
+			<string>ios-pay-demo</string>
 		</dict>
 	</array>
 </dict>

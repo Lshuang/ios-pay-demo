@@ -19,6 +19,9 @@
 }
 
 - (void)viewDidLoad{
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = backButton;
+    
     Goods *good1 = [[Goods alloc]init];
     NSMutableAttributedString* description1 = [[NSMutableAttributedString alloc]initWithString:@"裤子\n 蓝色\n 这是条裤裤"];
     [description1 setAttributes:@{NSForegroundColorAttributeName : [UIColor redColor],  NSFontAttributeName : [UIFont systemFontOfSize:17]} range:NSMakeRange(0, 2)];
@@ -49,26 +52,28 @@
     self.tableView.dataSource = self;
     
     self.tableView.tableFooterView = [[UIView alloc]init];
-        
-    UIView* checkView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-80, self.view.frame.size.width, 80)];
-    checkView.backgroundColor = [UIColor orangeColor];
+    self.tableView.backgroundColor = [UIColor colorWithRed:0.97 green:0.97 blue:0.97 alpha:1];
+    
+    UIView* checkView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-40, self.view.frame.size.width, 40)];
+    checkView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:checkView];
     
-    UIButton* checkButton = [[UIButton alloc]initWithFrame:CGRectMake(checkView.frame.size.width-80-5, checkView.frame.size.height/2-20, 80, 40)];
+    UIButton* checkButton = [[UIButton alloc]initWithFrame:CGRectMake(checkView.frame.size.width-80, 0, 80, 40)];
     [checkButton setTitle:@"结算" forState:UIControlStateNormal];
     [checkButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     checkButton.backgroundColor = [UIColor redColor];
     [checkView addSubview:checkButton];
     [checkButton addTarget:self action:@selector(check) forControlEvents:UIControlEventTouchDown];
     
-    totalCostLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, checkView.frame.size.height/2-20, checkView.frame.size.width-10-85, 40)];
+    totalCostLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 0, checkView.frame.size.width-10-80, 40)];
     totalCostLabel.text = [NSString stringWithFormat:@"总价：%.2f",totalCost];
+    totalCostLabel.textColor = [UIColor whiteColor];
     [checkView addSubview:totalCostLabel];
     
-    UIView* addressView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-80-40, self.view.frame.size.width, 40)];
+    UIView* addressView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-40-40, self.view.frame.size.width, 40)];
     [self.view addSubview:addressView];
     UILabel* addressLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, addressView.frame.size.height/2-10, addressView.frame.size.width, 20)];
-    addressLabel.text = @"请输入地址：我是地址啦啦啦~~~";
+    addressLabel.text = @"请输入地址：苏州工业园区若水路388号纳米大学科技园E栋1006 黄君贤";
     addressLabel.textColor = [UIColor blackColor];
     [addressView addSubview:addressLabel];
     
@@ -103,7 +108,7 @@
     cell.productCount = good.count;
     cell.productPrice = good.price;
     cell.index = indexPath.row;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone; 
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     if (good.count == 1){
         cell.removeButton.enabled = false;
