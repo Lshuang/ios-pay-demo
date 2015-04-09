@@ -52,14 +52,15 @@
 //traceid为:支付用户ID,必须保证在商户系统中的唯一性
 // block支付结果回调
 // 通过该方法实现对各种参数的初始化，然后发起微信支付，并跳转到微信.
-- (void)wxPay{
+- (void)wxPay {
+    
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"value",@"key", nil];
-    [BCWXPay reqWXPayment:kBody totalFee:@"1" outTradeNo:outTradeNo traceID:kTraceID optional:dict payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCWXPay reqWXPayV3:kBody totalFee:@"1" outTradeNo:outTradeNo traceID:kTraceID optional:dict payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             // 表明支付成功
         } else {
-            // 表明支付过程中出现错误，strMsg为错误原因
+            // 表明支付过程中出现错误，strMsg为错误原因。
         }
         [self showAlertView:strMsg];
         
@@ -72,7 +73,7 @@
 //refundReason:退款原因
 //refundFee:退款金额
 //payBlock:发起退款结果回调， 用户在app发起退款请求成功后，商户会收到退款请求，商户可在后台确认，完成退款操作
-- (void)wxRefund:(NSString*)outTradeNo{
+- (void)wxRefund:(NSString*)outTradeNo {
     NSString *outRefundNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
     NSLog(@"refund no = %@", outRefundNo);
     [BCWXPay reqWXRefund:outTradeNo outRefundNo:outRefundNo refundReason:kRefundReason refundFee:@"1" payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
@@ -147,7 +148,7 @@
 - (void)unionPay{
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"value",@"key", nil];
     NSString *outTradeNo = [[BCUtil generateRandomUUID] stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    [BCUnionPay reqUnionPayment:kTraceID body:[NSString stringWithFormat:@"%@",@"商户系统商户系统商户系统商户系统商"] outTradeNo:outTradeNo totalFee:@"1" viewController:self optional:dict payblock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCUnionPay reqUnionPayment:kTraceID body:kBody outTradeNo:outTradeNo totalFee:@"1" viewController:self optional:dict payblock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             if(success){
                 //

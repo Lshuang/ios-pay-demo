@@ -29,7 +29,7 @@ FOUNDATION_EXPORT const unsigned char BCAliPayVersionString[];
  *  支付宝支付
  *
  *  @param trace_id     支付用户ID，必须保证在商户系统中唯一.可通过trace_id查询订单详情。
- *  @param out_trade_no 商户系统内部的支付订单号,包含数字与字母,确保在商户系统中唯一
+ *  @param out_trade_no 商户系统内部的支付订单号,包含数字与字母,确保在商户系统中唯一,该参数最长为64个字符
  *  @param subject      商品的标题/交易标题/订单标题/订单关键字等。该参数最长为128个汉字
  *  @param body         对一笔交易的具体描述信息。如果是多种商品,请将商品描 述字符串累加传给body
  *  @param total_fee    该笔订单的资金总额,单位为RMB-Yuan。取值范围为[0.01,100000000.00],精确到小数点后两位

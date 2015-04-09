@@ -35,6 +35,8 @@ FOUNDATION_EXPORT const unsigned char BCWXPayVersionString[];
 
 /**
  *  微信支付调用接口.初始化wx_boby,wx_totalFee,wx_outTradeNo,wx_traceid后调用此接口发起微信支付，并跳转到微信。
+ *  如果您申请的是旧版本的微信支付，请使用此接口发起微信支付.
+ *  如果你微信支付审核通过后收到的邮件中没有提供paySignKey字段，说明您申请的微信支付是V3版本，请使用V3版本的支付接口
  *
  *  @param wx_body       商品描述
  *  @param wx_totalFee   支付金额,以分为单位
@@ -43,12 +45,31 @@ FOUNDATION_EXPORT const unsigned char BCWXPayVersionString[];
  *  @param optional      扩展参数，可以传入任意数量的key/value对来补充对业务逻辑的需求
  *  @param block         支付结果回调
  */
-+ (void)reqWXPayment:(NSString *)wx_body
-            totalFee:(NSString *)wx_totalFee
-          outTradeNo:(NSString *)wx_outTradeNo
-             traceID:(NSString *)wx_traceId
-            optional:(NSDictionary *)optional
-            payBlock:(BCPayBlock)block;
++ (void)reqWXPayV2:(NSString *)wx_body
+          totalFee:(NSString *)wx_totalFee
+        outTradeNo:(NSString *)wx_outTradeNo
+           traceID:(NSString *)wx_traceId
+          optional:(NSDictionary *)optional
+          payBlock:(BCPayBlock)block;
+
+/**
+ *  微信支付调用接口.初始化wx_boby,wx_totalFee,wx_outTradeNo,wx_traceid后调用此接口发起微信支付，并跳转到微信。
+ *  如果您申请的是新版本(V3)的微信支付，请使用此接口发起微信支付.
+ *  您在BeeCloud控制台需要填写“微信Partner ID”、“微信Partner KEY”、“微信APP ID”.
+ *
+ *  @param wx_body       商品描述
+ *  @param wx_totalFee   支付金额,以分为单位
+ *  @param wx_outTradeNo 商户系统内部的订单号,32个字符内、包含数字与字母,确保在商户系统中唯一
+ *  @param wx_traceId    支付用户ID，必须保证在商户系统中唯一
+ *  @param optional      扩展参数，可以传入任意数量的key/value对来补充对业务逻辑的需求
+ *  @param block         支付结果回调
+ */
++ (void)reqWXPayV3:(NSString *)wx_body
+          totalFee:(NSString *)wx_totalFee
+        outTradeNo:(NSString *)wx_outTradeNo
+           traceID:(NSString *)wx_traceId
+          optional:(NSDictionary *)optional
+          payBlock:(BCPayBlock)block;
 
 /**
  *  根据商家提供的订单号，异步查询该订单状态是否支持退款。

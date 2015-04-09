@@ -27,7 +27,7 @@ FOUNDATION_EXPORT const unsigned char BCUnionPayVersionString[];
  *  银联在线支付
  *
  *  @param trace_id       支付用户ID，必须保证在商户系统中唯一.可通过trace_id查询订单详情
- *  @param body           商品的标题/交易标题/订单标题/订单关键字等。该参数最长为32个字节
+ *  @param body           商品的标题/交易标题/订单标题/订单关键字等。该参数最长为32个字节(16个汉字)
  *  @param out_trade_no   商户系统内部的支付订单号,包含数字与字母,确保在商户系统中唯一
  *  @param total_fee      支付金额,以分为单位
  *  @param viewController 调起银联支付的页面
