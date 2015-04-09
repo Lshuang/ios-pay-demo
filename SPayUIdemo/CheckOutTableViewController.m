@@ -52,7 +52,7 @@
 
 - (void)wxPay {
     int cost = round(self.totalCost *100.0);
-    [BCWXPay reqWXPayment:self.customInfo.subject totalFee:[NSString stringWithFormat:@"%d",cost] outTradeNo:self.customInfo.outTradeNo traceID:self.customInfo.traceID optional:self.customInfo.optional payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCWXPay reqWXPayV3:self.customInfo.subject totalFee:[NSString stringWithFormat:@"%d",cost] outTradeNo:self.customInfo.outTradeNo traceID:self.customInfo.traceID optional:self.customInfo.optional payBlock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             NSString * storyboardName = @"CheckOutProcess";
             NSString * viewControllerID = @"SuccessViewController";
