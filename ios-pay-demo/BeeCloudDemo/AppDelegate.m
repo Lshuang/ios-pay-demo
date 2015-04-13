@@ -18,7 +18,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [BeeCloud initWithAppID:@"c5d1cba1-5e3f-4ba0-941d-9b0a371fe719" andAppSecret:@"39a7a518-9ac8-4a9e-87bc-7885f33cf18c"];
+//    [BeeCloud initWithAppID:@"c5d1cba1-5e3f-4ba0-941d-9b0a371fe719" andAppSecret:@"39a7a518-9ac8-4a9e-87bc-7885f33cf18c"];
+    
+    [BeeCloud initWithAppID:@"18aa7652-e8cf-4dfa-96dc-6e9e6a7e3d24" andAppSecret:@"a03b40ab-ba9f-4c6a-8b77-7fe9b5971bf1"];
+    
     [BeeCloud setWillPrintLog:YES];
     return YES;
 }
