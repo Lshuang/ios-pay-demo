@@ -28,5 +28,5 @@
 #define COCOAPODS_POD_AVAILABLE_BeeCloud_wxPay
 #define COCOAPODS_VERSION_MAJOR_BeeCloud_wxPay 2
 #define COCOAPODS_VERSION_MINOR_BeeCloud_wxPay 5
-#define COCOAPODS_VERSION_PATCH_BeeCloud_wxPay 0
+#define COCOAPODS_VERSION_PATCH_BeeCloud_wxPay 1
 
