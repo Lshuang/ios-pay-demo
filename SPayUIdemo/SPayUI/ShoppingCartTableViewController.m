@@ -34,15 +34,15 @@
     Goods *good2 = [[Goods alloc]init];
     good2.goodDescription = [[NSMutableAttributedString alloc]initWithString:@"鞋子"];
     good2.goodImage = @"xiezi";
-    good2.goodPrice = @"￥90";
+    good2.goodPrice = @"￥0.0";
     good2.count = 1;
-    good2.price = 90.0;
+    good2.price = 0.0;
     Goods *good3 = [[Goods alloc]init];
     good3.goodDescription = [[NSMutableAttributedString alloc]initWithString:@"衣服"];
     good3.goodImage = @"kuzi";
-    good3.goodPrice = @"￥50";
+    good3.goodPrice = @"￥0.0";
     good3.count = 1;
-    good3.price = 50.0;
+    good3.price = 0.0;
     
     totalCost = good1.price + good2.price + good3.price;
     
@@ -73,7 +73,7 @@
     UIView* addressView = [[UIView alloc]initWithFrame:CGRectMake(0, self.view.frame.size.height-40-40, self.view.frame.size.width, 40)];
     [self.view addSubview:addressView];
     UILabel* addressLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, addressView.frame.size.height/2-10, addressView.frame.size.width, 20)];
-    addressLabel.text = @"请输入地址：苏州工业园区若水路388号纳米大学科技园E栋1006 黄君贤";
+    addressLabel.text = @"请输入地址：苏州工业园区若水路388号纳米大学科技园E栋1006";
     addressLabel.textColor = [UIColor blackColor];
     [addressView addSubview:addressLabel];
     
@@ -115,7 +115,6 @@
     }else{
         cell.removeButton.enabled = true;
     }
-    
     return cell;
 }
 
@@ -131,7 +130,7 @@
     totalCostLabel.text = [NSString stringWithFormat:@"总价：%.2f",totalCost];
 }
 
-- (void)check{
+- (void)check {
     NSString * storyboardName = @"CheckOutProcess";
     NSString * viewControllerID = @"ConfirmViewController";
     UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
@@ -162,7 +161,7 @@
     [self.navigationController pushViewController:confirmViewController animated:YES];
 }
 
-- (void)addCount:(NSNotification*) notification{
+- (void)addCount:(NSNotification*)notification {
     double price = (double)[[notification.userInfo objectForKey:@"price"] doubleValue];
     NSInteger row = [[notification.userInfo objectForKey:@"row"] integerValue];
     Goods *good = self.tableData[row];
@@ -172,7 +171,7 @@
     totalCostLabel.text = [NSString stringWithFormat:@"总价：%.2f",totalCost];
 }
 
-- (void)removeCount:(NSNotification*) notification{
+- (void)removeCount:(NSNotification*)notification {
     double price = (double)[[notification.userInfo objectForKey:@"price"] doubleValue];
     NSInteger row = [[notification.userInfo objectForKey:@"row"] integerValue];
     Goods *good = self.tableData[row];

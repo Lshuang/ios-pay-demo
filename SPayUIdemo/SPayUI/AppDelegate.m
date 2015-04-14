@@ -17,9 +17,9 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [BeeCloud initWithAppID:@"c5d1cba1-5e3f-4ba0-941d-9b0a371fe719" andAppSecret:@"39a7a518-9ac8-4a9e-87bc-7885f33cf18c"];
+    //    [BeeCloud initWithAppID:@"447f27bf-76ca-4745-85d0-d1847dafc990" andAppSecret:@"95340620-1276-400b-ab3f-9d6467e8e07d"];
     [BeeCloud setWillPrintLog:YES];
     [self.window setTintColor:[UIColor redColor]];
     return YES;
