@@ -39,6 +39,7 @@
 		A8B514161AC52629009C11AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513FD1AC525B6009C11AE /* CoreGraphics.framework */; };
 		A8B514171AC52629009C11AE /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F71AC52592009C11AE /* AlipaySDK.framework */; };
 		A8B5141A1AC529F7009C11AE /* CustomInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B514191AC529F7009C11AE /* CustomInfo.m */; };
+		A8D08F831ADF53FD007BB356 /* PaymentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D08F821ADF53FD007BB356 /* PaymentListViewController.m */; };
 		A8FFA5901AC4FD7500A01672 /* CheckOutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FFA58F1AC4FD7500A01672 /* CheckOutTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,8 @@
 		A8B514091AC525E9009C11AE /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		A8B514181AC529F7009C11AE /* CustomInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomInfo.h; sourceTree = "<group>"; };
 		A8B514191AC529F7009C11AE /* CustomInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInfo.m; sourceTree = "<group>"; };
+		A8D08F811ADF53FD007BB356 /* PaymentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentListViewController.h; sourceTree = "<group>"; };
+		A8D08F821ADF53FD007BB356 /* PaymentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentListViewController.m; sourceTree = "<group>"; };
 		A8FFA58E1AC4FD7500A01672 /* CheckOutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckOutTableViewController.h; sourceTree = "<group>"; };
 		A8FFA58F1AC4FD7500A01672 /* CheckOutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckOutTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,6 +184,8 @@
 			children = (
 				A8B0ACFA1AC05EAD009CC9E0 /* Main.storyboard */,
 				A8AEE0161AC1000B0025BCEC /* ShoppingCartTableViewController.h */,
+				A8D08F811ADF53FD007BB356 /* PaymentListViewController.h */,
+				A8D08F821ADF53FD007BB356 /* PaymentListViewController.m */,
 				A8AEE0171AC1000B0025BCEC /* ShoppingCartTableViewController.m */,
 				A8AEE0131AC0FD270025BCEC /* ShoppingCartTableViewCell.h */,
 				A8AEE0141AC0FD270025BCEC /* ShoppingCartTableViewCell.m */,
@@ -366,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B0ACF61AC05EAD009CC9E0 /* AppDelegate.m in Sources */,
+				A8D08F831ADF53FD007BB356 /* PaymentListViewController.m in Sources */,
 				A8ACA5011AC25F810087B0EB /* ConfirmViewController.m in Sources */,
 				A8B0ACF31AC05EAD009CC9E0 /* main.m in Sources */,
 				A8AE9DF41AC3ADAE007EE9D4 /* OptionalTableViewCell.m in Sources */,

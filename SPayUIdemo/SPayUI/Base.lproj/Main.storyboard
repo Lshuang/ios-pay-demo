@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gyP-8O-MD2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gyP-8O-MD2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -145,7 +145,13 @@
                             <constraint firstItem="OVV-9D-Qfp" firstAttribute="bottom" secondItem="ll0-7g-Of0" secondAttribute="top" id="XBp-ea-tW8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="购物车" id="O4o-gH-3wm"/>
+                    <navigationItem key="navigationItem" title="购物车" id="O4o-gH-3wm">
+                        <barButtonItem key="rightBarButtonItem" title="查看订单" id="p76-lo-9JN">
+                            <connections>
+                                <segue destination="Q47-yJ-60Q" kind="show" id="eX6-sI-Wcl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="OVV-9D-Qfp" id="AKe-UU-580"/>
                     </connections>
@@ -153,6 +159,96 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zyl-mT-rY8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1276" y="1156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rWz-Ll-mPt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q47-yJ-60Q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="aQr-jR-GjW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I4z-0a-ed9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uws-Qf-9nC" kind="relationship" relationship="rootViewController" id="gRs-g8-nIB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ua-61-hLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2114" y="1156"/>
+        </scene>
+        <!--订单列表-->
+        <scene sceneID="4Sa-ba-i0E">
+            <objects>
+                <viewController id="uws-Qf-9nC" customClass="PaymentListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="quP-Dj-8fn"/>
+                        <viewControllerLayoutGuide type="bottom" id="2JA-tg-9Mf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iVm-yx-WZO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="uDG-qV-Cd8">
+                                <rect key="frame" x="16" y="72" width="568" height="29"/>
+                                <segments>
+                                    <segment title="支付宝账单"/>
+                                    <segment title="微信账单"/>
+                                    <segment title="银联账单"/>
+                                </segments>
+                                <connections>
+                                    <action selector="checkPayList:" destination="uws-Qf-9nC" eventType="valueChanged" id="gjY-cX-Zi3"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="NNW-vR-g8a">
+                                <rect key="frame" x="0.0" y="103" width="600" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Zhu-b1-liC" detailTextLabel="Mco-m4-3kE" style="IBUITableViewCellStyleSubtitle" id="4fo-QA-BOT">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4fo-QA-BOT" id="Coj-Xz-cue">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zhu-b1-liC">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mco-m4-3kE">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uDG-qV-Cd8" firstAttribute="leading" secondItem="iVm-yx-WZO" secondAttribute="leadingMargin" id="Cw9-9H-bhb"/>
+                            <constraint firstItem="NNW-vR-g8a" firstAttribute="top" secondItem="uDG-qV-Cd8" secondAttribute="bottom" constant="3" id="Ocv-7E-kmk"/>
+                            <constraint firstItem="NNW-vR-g8a" firstAttribute="centerX" secondItem="uDG-qV-Cd8" secondAttribute="centerX" id="XI0-1b-Us9"/>
+                            <constraint firstItem="NNW-vR-g8a" firstAttribute="leading" secondItem="iVm-yx-WZO" secondAttribute="leading" id="Z3Y-VW-3sy"/>
+                            <constraint firstAttribute="trailing" secondItem="NNW-vR-g8a" secondAttribute="trailing" id="c9H-p9-Kjt"/>
+                            <constraint firstItem="uDG-qV-Cd8" firstAttribute="top" secondItem="quP-Dj-8fn" secondAttribute="bottom" constant="8" symbolic="YES" id="k6q-e0-lTX"/>
+                            <constraint firstItem="NNW-vR-g8a" firstAttribute="bottom" secondItem="2JA-tg-9Mf" secondAttribute="top" id="xAx-lf-pcx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="订单列表" id="CZy-wL-SkB"/>
+                    <connections>
+                        <outlet property="listTableView" destination="NNW-vR-g8a" id="2JJ-dB-NbQ"/>
+                        <outlet property="paySegment" destination="uDG-qV-Cd8" id="lAd-y3-usC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4M-Sr-Vl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2891" y="1156"/>
         </scene>
     </scenes>
     <resources>
