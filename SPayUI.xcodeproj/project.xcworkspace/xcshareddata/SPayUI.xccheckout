@@ -7,18 +7,18 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>C5B969DE-E700-4714-A815-2467457454B5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>SPayUI</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>437CACC3A701B4D8834453EAA7EBA8C8BCAAF535</key>
 		<string>https://github.com/beecloud/ios-pay-demo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>SPayUIdemo/SPayUI.xcodeproj/project.xcworkspace</string>
+	<string>SPayUI.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>437CACC3A701B4D8834453EAA7EBA8C8BCAAF535</key>
-		<string>../../..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/beecloud/ios-pay-demo.git</string>

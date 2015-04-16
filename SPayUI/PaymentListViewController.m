@@ -38,9 +38,9 @@
 
 - (NSArray *)queryOrder:(NSUInteger)index {
     NSArray *array = nil;
-    if (index == 0) {
+    if (index == 1) {
         array = [BCWXPay queryWXPayOrderByKey:OrderKeyTraceID value:@"BeeCloudSPay" orderType:BCPayWxPay];
-    } else if(index == 1) {
+    } else if(index == 0) {
         array = [BCAliPay queryAliOrderByKey:OrderKeyTraceID value:@"BeeCloudSPay" orderType:BCPayAliPay];
     }else{
         array = [BCUnionPay queryUPOrderByKey:OrderKeyTraceID value:@"BeeCloudSPay" orderType:BCPayUPPay];
