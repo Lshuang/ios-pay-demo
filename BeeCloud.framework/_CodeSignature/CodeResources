@@ -32,10 +32,6 @@
 		<data>
 		XXFIh/tMHMtMGnS0N/XMn4x/+4U=
 		</data>
-		<key>Headers/BCPay.h</key>
-		<data>
-		vcDE6M7z4KMMTRjCPGmGVRUFb3E=
-		</data>
 		<key>Headers/BCQuery.h</key>
 		<data>
 		H99CdrOurqz0TjNKtJg87jdQV5I=
@@ -90,11 +86,11 @@
 		</data>
 		<key>Headers/BeeCloud.h</key>
 		<data>
-		LhZX1H7c91oe2iNzUvPhx+s9HV4=
+		sGKZgxOgyQfc0k2hvrXCj1D72M4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		KGyvUO//dQO7LrqtnrsFj7McSYg=
+		oJzGVOY9NAIuw2xpzz46rZZuihU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -131,10 +127,6 @@
 		<data>
 		XXFIh/tMHMtMGnS0N/XMn4x/+4U=
 		</data>
-		<key>Headers/BCPay.h</key>
-		<data>
-		vcDE6M7z4KMMTRjCPGmGVRUFb3E=
-		</data>
 		<key>Headers/BCQuery.h</key>
 		<data>
 		H99CdrOurqz0TjNKtJg87jdQV5I=
@@ -189,7 +181,7 @@
 		</data>
 		<key>Headers/BeeCloud.h</key>
 		<data>
-		LhZX1H7c91oe2iNzUvPhx+s9HV4=
+		sGKZgxOgyQfc0k2hvrXCj1D72M4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>

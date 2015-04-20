@@ -2,7 +2,7 @@
 //  PaymentListViewController.h
 //  SPayUI
 //
-//  Created by 钱志浩 on 15/4/16.
+//  Created by RInz on 15/4/16.
 //  Copyright (c) 2015年 BeeCloud. All rights reserved.
 //
 

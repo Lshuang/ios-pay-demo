@@ -1,0 +1,6 @@
+framework module BCIAPay {
+  umbrella header "BCIAPay.h"
+
+  export *
+  module * { export * }
+}

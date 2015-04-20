@@ -29,7 +29,6 @@
 		A8B5140C1AC52621009C11AE /* BCAliPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F21AC52592009C11AE /* BCAliPay.framework */; };
 		A8B5140D1AC52621009C11AE /* BCUnionPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F31AC52592009C11AE /* BCUnionPay.framework */; };
 		A8B5140E1AC52621009C11AE /* BCWXPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F41AC52592009C11AE /* BCWXPay.framework */; };
-		A8B5140F1AC52621009C11AE /* BeeCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F51AC52592009C11AE /* BeeCloud.framework */; };
 		A8B514101AC52629009C11AE /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B514091AC525E9009C11AE /* CoreTelephony.framework */; };
 		A8B514111AC52629009C11AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B514071AC525E1009C11AE /* UIKit.framework */; };
 		A8B514121AC52629009C11AE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B514051AC525DA009C11AE /* SystemConfiguration.framework */; };
@@ -40,6 +39,10 @@
 		A8B514171AC52629009C11AE /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F71AC52592009C11AE /* AlipaySDK.framework */; };
 		A8B5141A1AC529F7009C11AE /* CustomInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A8B514191AC529F7009C11AE /* CustomInfo.m */; };
 		A8D08F831ADF53FD007BB356 /* PaymentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D08F821ADF53FD007BB356 /* PaymentListViewController.m */; };
+		A8D8A2611AE0B0C0008715D9 /* BCIAPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D8A25F1AE0B099008715D9 /* BCIAPay.framework */; };
+		A8D916B71AE48A0800D58EB0 /* BeeCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F51AC52592009C11AE /* BeeCloud.framework */; };
+		A8F326A31AE0CE1000F2C321 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F326A21AE0CE1000F2C321 /* StoreKit.framework */; };
+		A8F326A61AE0D66300F2C321 /* InAppPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F326A51AE0D66300F2C321 /* InAppPayViewController.m */; };
 		A8FFA5901AC4FD7500A01672 /* CheckOutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FFA58F1AC4FD7500A01672 /* CheckOutTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +105,10 @@
 		A8B514191AC529F7009C11AE /* CustomInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomInfo.m; sourceTree = "<group>"; };
 		A8D08F811ADF53FD007BB356 /* PaymentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentListViewController.h; sourceTree = "<group>"; };
 		A8D08F821ADF53FD007BB356 /* PaymentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentListViewController.m; sourceTree = "<group>"; };
+		A8D8A25F1AE0B099008715D9 /* BCIAPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BCIAPay.framework; sourceTree = "<group>"; };
+		A8F326A21AE0CE1000F2C321 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A8F326A41AE0D66300F2C321 /* InAppPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPayViewController.h; sourceTree = "<group>"; };
+		A8F326A51AE0D66300F2C321 /* InAppPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPayViewController.m; sourceTree = "<group>"; };
 		A8FFA58E1AC4FD7500A01672 /* CheckOutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckOutTableViewController.h; sourceTree = "<group>"; };
 		A8FFA58F1AC4FD7500A01672 /* CheckOutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckOutTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,19 +118,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8D916B71AE48A0800D58EB0 /* BeeCloud.framework in Frameworks */,
+				A8D8A2611AE0B0C0008715D9 /* BCIAPay.framework in Frameworks */,
 				A89785551AC539B500466E0F /* libsqlite3.0.dylib in Frameworks */,
 				A89785531AC539A400466E0F /* libz.dylib in Frameworks */,
 				A89785511AC5398100466E0F /* libc++.dylib in Frameworks */,
 				A8B5140C1AC52621009C11AE /* BCAliPay.framework in Frameworks */,
 				A8B5140D1AC52621009C11AE /* BCUnionPay.framework in Frameworks */,
 				A8B5140E1AC52621009C11AE /* BCWXPay.framework in Frameworks */,
-				A8B5140F1AC52621009C11AE /* BeeCloud.framework in Frameworks */,
 				A8B514101AC52629009C11AE /* CoreTelephony.framework in Frameworks */,
 				A8B514111AC52629009C11AE /* UIKit.framework in Frameworks */,
 				A8B514121AC52629009C11AE /* SystemConfiguration.framework in Frameworks */,
 				A8B514131AC52629009C11AE /* Security.framework in Frameworks */,
 				A8B514141AC52629009C11AE /* MobileCoreServices.framework in Frameworks */,
 				A8B514151AC52629009C11AE /* CoreLocation.framework in Frameworks */,
+				A8F326A31AE0CE1000F2C321 /* StoreKit.framework in Frameworks */,
 				A8B514161AC52629009C11AE /* CoreGraphics.framework in Frameworks */,
 				A8B514171AC52629009C11AE /* AlipaySDK.framework in Frameworks */,
 			);
@@ -162,6 +171,7 @@
 		A8B0ACE41AC05EAD009CC9E0 = {
 			isa = PBXGroup;
 			children = (
+				A8F326A21AE0CE1000F2C321 /* StoreKit.framework */,
 				A8ACA4FE1AC25E0C0087B0EB /* SPayUISDK */,
 				A8B0ACEF1AC05EAD009CC9E0 /* SPayUI */,
 				A8B0AD091AC05EAD009CC9E0 /* SPayUITests */,
@@ -183,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				A8B0ACFA1AC05EAD009CC9E0 /* Main.storyboard */,
+				A8F326A41AE0D66300F2C321 /* InAppPayViewController.h */,
+				A8F326A51AE0D66300F2C321 /* InAppPayViewController.m */,
 				A8AEE0161AC1000B0025BCEC /* ShoppingCartTableViewController.h */,
 				A8D08F811ADF53FD007BB356 /* PaymentListViewController.h */,
 				A8D08F821ADF53FD007BB356 /* PaymentListViewController.m */,
@@ -242,6 +254,7 @@
 		A8B5140B1AC52600009C11AE /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				A8D8A25F1AE0B099008715D9 /* BCIAPay.framework */,
 				A89785541AC539B500466E0F /* libsqlite3.0.dylib */,
 				A89785521AC539A400466E0F /* libz.dylib */,
 				A89785501AC5398000466E0F /* libc++.dylib */,
@@ -318,6 +331,11 @@
 					A8B0ACEC1AC05EAD009CC9E0 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = Y5MWN9388T;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					A8B0AD051AC05EAD009CC9E0 = {
 						CreatedOnToolsVersion = 6.2;
@@ -381,6 +399,7 @@
 				A8ACA4FD1AC25D950087B0EB /* ConfirmTableViewCell.m in Sources */,
 				A8AE9DF81AC3B14A007EE9D4 /* Optional.m in Sources */,
 				A8AEE0181AC1000B0025BCEC /* ShoppingCartTableViewController.m in Sources */,
+				A8F326A61AE0D66300F2C321 /* InAppPayViewController.m in Sources */,
 				A8AEE0151AC0FD270025BCEC /* ShoppingCartTableViewCell.m in Sources */,
 				A8B33A4D1AC69240001E1AA8 /* SuccessViewController.m in Sources */,
 				A8FFA5901AC4FD7500A01672 /* CheckOutTableViewController.m in Sources */,
