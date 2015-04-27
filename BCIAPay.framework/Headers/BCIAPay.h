@@ -18,6 +18,16 @@ FOUNDATION_EXPORT double BCIAPayVersionNumber;
 FOUNDATION_EXPORT const unsigned char BCIAPayVersionString[];
 
 static NSString * const kBCIAPClassName = @"iap_record_";
+static NSString * const kBCIAPSettingName = @"ios_inapp_purchase_product__";
+
+typedef NS_OPTIONS(NSInteger, ProductTypes) {
+    ProductTypeAll              = 0,
+    ProductTypeConsumable       = 1<<0,
+    ProductTypeNonConsumable    = 1<<1,
+    ProductTypeAutoRenewable    = 1<<2,
+    ProductTypeFreeSubscription = 1<<3,
+    ProductTypeNonRenewing      = 1<<4
+};
 
 @interface BCIAPay : NSObject<SKProductsRequestDelegate>
 
@@ -80,6 +90,15 @@ static NSString * const kBCIAPClassName = @"iap_record_";
  *                    in-app store init in the block.
  */
 - (void)initProducts:(NSArray *)productIds withBlock:(BCProductBlock)block;
+
+/**
+ *  get products list from BeeCloud setting and init products.
+ *
+ *  @param type  NS_OPTIONS ProductTypeAll代表全部类型，其他类型用'|'组合选取
+ *  @param block The block could be nil for just keep the products in @products, or you can do some init job for
+                 in-app store init in the block.
+ */
+- (void)initProductsFromCloudByType:(ProductTypes)type withBlock:(BCProductBlock)block;
 
 /**
  *  Purchase a product.

@@ -13,7 +13,9 @@
 @synthesize starCount;
 
 - (void)viewDidLoad {
-    [[BCIAPay sharedInstance]initProducts:@[@"spayui_starstar"] withBlock:nil];
+    ProductTypes type = ProductTypeConsumable|ProductTypeNonConsumable;//|ProductTypeConsumable|ProductTypeAutoRenewable|ProductTypeFreeSubscription|ProductTypeNonRenewing
+    [[BCIAPay sharedInstance]initProductsFromCloudByType:type withBlock:nil];
+//    [[BCIAPay sharedInstance]initProducts:@[@"spayui_starstar"] withBlock:nil];
     self.starCount = 0;
 }
 
@@ -23,6 +25,7 @@
             self.starNumberLabel.text = @"我有1颗星星";
         }
         else {
+            SKProduct* prd = [BCIAPay sharedInstance].products[0];
             NSLog([NSString stringWithFormat:@"state: %d, error:%@",state, error.description]);
         }
     }];
