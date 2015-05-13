@@ -132,7 +132,7 @@ already taken.
  *
  *  @return YES if the email is available.
  */
-+ (BOOL)checkEmailAvailability:(NSString *)email error:(NSError **)error;
++ (BOOL)checkEmailIsExist:(NSString *)email error:(NSError **)error;
 
 /**
  *  Check whether this email is available for user to use. The emails that exist in the cloud are not available.

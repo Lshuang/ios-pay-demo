@@ -56,7 +56,8 @@
 
 /**
  *  Make the results to include only the provided keys. This is similar to MySQL's "select X, Y from table". If this is
- *  called multiple times, then all of the keys specified in each of the calls will be included.
+ *  called multiple times, then all of the keys specified in each of the calls will be included. ObjectId is always
+ *  automatically selected as it is a required element of BCObject.
  *
  *  If one or more of the selected keys do not exist in the table being queried, the query would fail.
  *
