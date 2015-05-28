@@ -11,7 +11,9 @@
 #import <BCAliPay/BCAliPay.h>
 #import <BCWXPay/BCWXPay.h>
 #import <BCUnionPay/BCUnionPay.h>
+#import <BCMMMPay/BCMMMPay.h>
 #import "CustomInfo.h"
+#import <BCMMMPay/BCMMMPayViewController.h>
 
 @interface CheckOutTableViewController : UITableViewController
 

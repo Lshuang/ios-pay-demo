@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8279A5D1B14C8550031C5B1 /* BCMMMPay.framework in Resources */ = {isa = PBXBuildFile; fileRef = A8E1BA531B143A9800F2DBF7 /* BCMMMPay.framework */; };
 		A89785511AC5398100466E0F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A89785501AC5398000466E0F /* libc++.dylib */; };
 		A89785531AC539A400466E0F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A89785521AC539A400466E0F /* libz.dylib */; };
 		A89785551AC539B500466E0F /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A89785541AC539B500466E0F /* libsqlite3.0.dylib */; };
@@ -41,6 +42,7 @@
 		A8D08F831ADF53FD007BB356 /* PaymentListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8D08F821ADF53FD007BB356 /* PaymentListViewController.m */; };
 		A8D8A2611AE0B0C0008715D9 /* BCIAPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8D8A25F1AE0B099008715D9 /* BCIAPay.framework */; };
 		A8D916B71AE48A0800D58EB0 /* BeeCloud.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B513F51AC52592009C11AE /* BeeCloud.framework */; };
+		A8E1BA551B143AB900F2DBF7 /* BCMMMPay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8E1BA531B143A9800F2DBF7 /* BCMMMPay.framework */; };
 		A8F326A31AE0CE1000F2C321 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8F326A21AE0CE1000F2C321 /* StoreKit.framework */; };
 		A8F326A61AE0D66300F2C321 /* InAppPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F326A51AE0D66300F2C321 /* InAppPayViewController.m */; };
 		A8FFA5901AC4FD7500A01672 /* CheckOutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8FFA58F1AC4FD7500A01672 /* CheckOutTableViewController.m */; };
@@ -106,6 +108,7 @@
 		A8D08F811ADF53FD007BB356 /* PaymentListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentListViewController.h; sourceTree = "<group>"; };
 		A8D08F821ADF53FD007BB356 /* PaymentListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentListViewController.m; sourceTree = "<group>"; };
 		A8D8A25F1AE0B099008715D9 /* BCIAPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BCIAPay.framework; sourceTree = "<group>"; };
+		A8E1BA531B143A9800F2DBF7 /* BCMMMPay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BCMMMPay.framework; sourceTree = "<group>"; };
 		A8F326A21AE0CE1000F2C321 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A8F326A41AE0D66300F2C321 /* InAppPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPayViewController.h; sourceTree = "<group>"; };
 		A8F326A51AE0D66300F2C321 /* InAppPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPayViewController.m; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8E1BA551B143AB900F2DBF7 /* BCMMMPay.framework in Frameworks */,
 				A8D916B71AE48A0800D58EB0 /* BeeCloud.framework in Frameworks */,
 				A8D8A2611AE0B0C0008715D9 /* BCIAPay.framework in Frameworks */,
 				A89785551AC539B500466E0F /* libsqlite3.0.dylib in Frameworks */,
@@ -253,6 +257,7 @@
 		A8B5140B1AC52600009C11AE /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				A8E1BA531B143A9800F2DBF7 /* BCMMMPay.framework */,
 				A8F326A21AE0CE1000F2C321 /* StoreKit.framework */,
 				A8D8A25F1AE0B099008715D9 /* BCIAPay.framework */,
 				A89785541AC539B500466E0F /* libsqlite3.0.dylib */,
@@ -367,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8279A5D1B14C8550031C5B1 /* BCMMMPay.framework in Resources */,
 				A8B0ACFC1AC05EAD009CC9E0 /* Main.storyboard in Resources */,
 				A8B0AD011AC05EAD009CC9E0 /* LaunchScreen.xib in Resources */,
 				A8AE9DF51AC3ADAE007EE9D4 /* OptionalTableViewCell.xib in Resources */,

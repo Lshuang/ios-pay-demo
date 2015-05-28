@@ -32,7 +32,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 3;
+    return 4;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -45,6 +45,10 @@
             break;
         case 2:
             [self unionPay];
+            break;
+        case 3:
+            [self mmmPay];
+            break;
         default:
             break;
     }
@@ -61,6 +65,7 @@
 //            [self.navigationController presentViewController:successViewController animated:YES completion:nil];
             [self.navigationController pushViewController:successViewController animated:YES];
         } else {
+            NSLog(strMsg);
             // 表明支付过程中出现错误，strMsg为错误原因
         }
         if (error) NSLog(@"%s,%s,%d,%@", __FILE__, __func__, __LINE__, error);
@@ -90,13 +95,27 @@
             NSString * viewControllerID = @"SuccessViewController";
             UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
             SuccessViewController *successViewController = [storyboard instantiateViewControllerWithIdentifier:viewControllerID];
-//            [self.navigationController presentViewController:successViewController animated:YES completion:nil];
             [self.navigationController pushViewController:successViewController animated:YES];
         }else{
             NSLog(@"UnionPay Faild:%@",error.description);
         }
     }];
 }
+
+- (void)mmmPay {
+    [BCMMMPay reqMMMPay:@"183338" billNo:self.customInfo.outTradeNo amount:@"0.01" paymentType:@"" products:@"AppleNike" viewController:self payblock:^(BOOL success, NSString *strMsg, NSError *error) {
+        if (success) {
+            NSString * storyboardName = @"CheckOutProcess";
+            NSString * viewControllerID = @"SuccessViewController";
+            UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
+            SuccessViewController *successViewController = [storyboard instantiateViewControllerWithIdentifier:viewControllerID];
+            [self.navigationController pushViewController:successViewController animated:YES];
+        }else{
+            NSLog(@"MMMPay Faild:%@",error.description);
+        }
+    }];
+}
+
 
 
 

@@ -1,0 +1,6 @@
+framework module BCMMMPay {
+  umbrella header "BCMMMPay.h"
+
+  export *
+  module * { export * }
+}
