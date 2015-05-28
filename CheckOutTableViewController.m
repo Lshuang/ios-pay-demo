@@ -103,7 +103,7 @@
 }
 
 - (void)mmmPay {
-    [BCMMMPay reqMMMPay:@"183338" billNo:self.customInfo.outTradeNo amount:@"0.01" paymentType:@"" products:@"AppleNike" viewController:self payblock:^(BOOL success, NSString *strMsg, NSError *error) {
+    [BCMMMPay reqMMMPay:@"183338" billNo:self.customInfo.outTradeNo amount:[NSString stringWithFormat:@"%.2f",self.totalCost] paymentType:@"" products:@"AppleNike" viewController:self payblock:^(BOOL success, NSString *strMsg, NSError *error) {
         if (success) {
             NSString * storyboardName = @"CheckOutProcess";
             NSString * viewControllerID = @"SuccessViewController";
