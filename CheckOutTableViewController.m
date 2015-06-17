@@ -97,7 +97,7 @@
             SuccessViewController *successViewController = [storyboard instantiateViewControllerWithIdentifier:viewControllerID];
             [self.navigationController pushViewController:successViewController animated:YES];
         }else{
-            NSLog(@"UnionPay Faild:%@",error.description);
+          
         }
     }];
 }
