@@ -31,18 +31,18 @@ FOUNDATION_EXPORT const unsigned char BCAliPayVersionString[];
  *  @param trace_id     支付用户ID，必须保证在商户系统中唯一.可通过trace_id查询订单详情。
  *  @param out_trade_no 商户系统内部的支付订单号,包含数字与字母,确保在商户系统中唯一,该参数最长为64个字符
  *  @param subject      商品的标题/交易标题/订单标题/订单关键字等。该参数最长为128个汉字
- *  @param body         对一笔交易的具体描述信息。如果是多种商品,请将商品描 述字符串累加传给body
+ *  @param body         对一笔交易的具体描述信息。如果是多种商品,请将商品描述字符串累加传给body,长度不大于512字节
  *  @param total_fee    该笔订单的资金总额,单位为RMB-Yuan。取值范围为[0.01,100000000.00],精确到小数点后两位
  *  @param scheme       调用支付的app注册在info。plist中的scheme
  *  @param optional     扩展参数，可以传入任意数量的key/value对来补充对业务逻辑的需求
  *  @param block        支付结果回调.strMsg=@"订单支付成功";//@"正在处理中";@"订单支付失败";@"用户中途取消";@"网络连接错误";
  */
-+ (void)reqAliPayment:(NSString *)ali_trace_id
-           outTradeNo:(NSString *)ali_out_trade_no
-              subject:(NSString *)ali_subject
-                 body:(NSString *)ali_body
-             totalFee:(NSString *)ali_total_fee
-               scheme:(NSString *)ali_scheme
++ (void)reqAliPayment:(NSString *)trace_id
+           outTradeNo:(NSString *)out_trade_no
+              subject:(NSString *)subject
+                 body:(NSString *)body
+             totalFee:(NSString *)total_fee
+               scheme:(NSString *)scheme
              optional:(NSDictionary *)optional
              payBlock:(BCPayBlock)block;
 
@@ -56,10 +56,10 @@ FOUNDATION_EXPORT const unsigned char BCAliPayVersionString[];
  *  @param refund_reason 退款原因
  *  @param block         退款结果回调
  */
-+ (void)reqAliRefund:(NSString *)ali_out_trade_no
-            refundNo:(NSString *)ali_refund_no
-           refundFee:(NSString *)ali_refund_fee
-        refundReason:(NSString *)ali_refund_reason
++ (void)reqAliRefund:(NSString *)out_trade_no
+            refundNo:(NSString *)out_refund_no
+           refundFee:(NSString *)refund_fee
+        refundReason:(NSString *)refund_reason
          refundBlock:(BCPayBlock)block;
 
 /**
@@ -70,20 +70,6 @@ FOUNDATION_EXPORT const unsigned char BCAliPayVersionString[];
  *  @param type    支付平台的支付订单或者退款订单。
  *
  *  @return 符合条件的订单列表
- ("subject",商品名称) ("body",商品描述) ("buyer_id",买家ID) ("buyer_email",买家emai) ("trace_time",订单创建时间)
- ("out_trade_no",商家自定义订单号) ("partner",商家ID) ("refund_status",退款状态)
- ("seller_email",卖家email) ("seller_id",卖家ID) ("total_fee",支付金额) ("trace_id",商户平台用户名)
- ("trade_state",交易状态) ("trace_no",交易流水号) ("refund_finish",退款操作是否完成)
- ("refund_fee",退款金额) ("refund_reason",退款原因) ("reject_reason",拒绝退款原因)
- ("refund_status",退款实时状态)
- @refund status
- REFUND_START = 0; //退款开始
- REFUND_REJECT = 1; //退款被商家拒绝
- REFUND_ACCEPT = 2; //退款被商家同意
- REFUND_SUCCESS = 3; //退款成功
- REFUND_FAIL = 4; //退款被渠道拒绝
- REFUND_RETRY = 5; //退款被渠道拒绝，但原因不明， 需要用原退款单号重试
- REFUND_NEED_OFFLINE = 6; //用户银行卡已注销，现金回流到商户账户，需要走线下人工操作
  */
 + (NSArray *)queryAliOrderByKey:(BCPayOrderKey)key value:(NSString *)value orderType:(BCPayOrderType)type;
 

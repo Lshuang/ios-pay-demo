@@ -15,9 +15,6 @@ FOUNDATION_EXPORT double BCUnionPayVersionNumber;
 //! Project version string for BCUnionPay.
 FOUNDATION_EXPORT const unsigned char BCUnionPayVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <BCUnionPay/PublicHeader.h>
-
-
 @interface BCUnionPay : NSObject
     
 #pragma mark - UnionPay functions
@@ -28,7 +25,7 @@ FOUNDATION_EXPORT const unsigned char BCUnionPayVersionString[];
  *
  *  @param trace_id       支付用户ID，必须保证在商户系统中唯一.可通过trace_id查询订单详情
  *  @param body           商品的标题/交易标题/订单标题/订单关键字等。该参数最长为32个字节(16个汉字)
- *  @param out_trade_no   商户系统内部的支付订单号,包含数字与字母,确保在商户系统中唯一
+ *  @param out_trade_no   商户系统内部的支付订单号,包含数字与字母,确保在商户系统中唯一,8~40字节的变长字母和/或数字字符
  *  @param total_fee      支付金额,以分为单位
  *  @param viewController 调起银联支付的页面
  *  @param optional       扩展参数，可以传入任意数量的key/value对来补充对业务逻辑的需求
@@ -45,9 +42,9 @@ FOUNDATION_EXPORT const unsigned char BCUnionPayVersionString[];
 /**
  *  银联预退款，支持部分退款或者全额退款。如果提供的支付订单的交易状态不支持退款，在block中返回具体的信息;如果支持退款，生成预退款订单，商户在管理后台管理预退款订单。
  *
- *  @param out_trade_no  商户系统内部的支付订单号,包含数字与字母,确保在商户系统中唯一
+ *  @param out_trade_no  商户系统内部的支付订单号,包含数字与字母,确保在商户系统中唯一,8~40字节的变长字母和/或数字字符
  *  @param refund_fee    退款金额
- *  @param out_refund_no 商户系统内部的退款订单号,包含数字与字母,确保在商户系统中唯一
+ *  @param out_refund_no 商户系统内部的退款订单号,包含数字与字母,确保在商户系统中唯一,8~40字节的变长字母和/或数字字符
  *  @param refund_reason 退款原因
  *  @param block         接收预退款订单生成结果
  */
@@ -87,7 +84,7 @@ FOUNDATION_EXPORT const unsigned char BCUnionPayVersionString[];
  *
  *  @param key   根据key查询。trace_id,out_trade_no,our_refund_no
  *  @param value 要查询的值
- *  @param type    支付平台的支付订单或者退款订单
+ *  @param type  支付平台的支付订单或者退款订单
  *  @param block 接收查询结果
  */
 + (void)queryUPOrderByKeyAsync:(BCPayOrderKey)key value:(NSString *)value orderType:(BCPayOrderType)type block:(BCArrayResultBlock)block;

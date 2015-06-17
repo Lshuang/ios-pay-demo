@@ -34,88 +34,55 @@ FOUNDATION_EXPORT const unsigned char BCWXPayVersionString[];
 + (BOOL)handleOpenUrl:(NSURL *)url;
 
 /**
- *  微信支付调用接口.初始化wx_boby,wx_totalFee,wx_outTradeNo,wx_traceid后调用此接口发起微信支付，并跳转到微信。
- *  如果您申请的是旧版本的微信支付，请使用此接口发起微信支付.
- *  如果你微信支付审核通过后收到的邮件中没有提供paySignKey字段，说明您申请的微信支付是V3版本，请使用V3版本的支付接口
- *
- *  @param wx_body       商品描述
- *  @param wx_totalFee   支付金额,以分为单位
- *  @param wx_outTradeNo 商户系统内部的订单号,32个字符内、包含数字与字母,确保在商户系统中唯一
- *  @param wx_traceId    支付用户ID，必须保证在商户系统中唯一
- *  @param optional      扩展参数，可以传入任意数量的key/value对来补充对业务逻辑的需求
- *  @param block         支付结果回调
- */
-+ (void)reqWXPayV2:(NSString *)wx_body
-          totalFee:(NSString *)wx_totalFee
-        outTradeNo:(NSString *)wx_outTradeNo
-           traceID:(NSString *)wx_traceId
-          optional:(NSDictionary *)optional
-          payBlock:(BCPayBlock)block;
-
-/**
- *  微信支付调用接口.初始化wx_boby,wx_totalFee,wx_outTradeNo,wx_traceid后调用此接口发起微信支付，并跳转到微信。
+ *  微信支付调用接口.初始化boby,totalFee,outTradeNo,traceid后调用此接口发起微信支付，并跳转到微信。
  *  如果您申请的是新版本(V3)的微信支付，请使用此接口发起微信支付.
  *  您在BeeCloud控制台需要填写“微信Partner ID”、“微信Partner KEY”、“微信APP ID”.
  *
- *  @param wx_body       商品描述
- *  @param wx_totalFee   支付金额,以分为单位
- *  @param wx_outTradeNo 商户系统内部的订单号,32个字符内、包含数字与字母,确保在商户系统中唯一
- *  @param wx_traceId    支付用户ID，必须保证在商户系统中唯一
- *  @param optional      扩展参数，可以传入任意数量的key/value对来补充对业务逻辑的需求
- *  @param block         支付结果回调
+ *  @param body       商品描述
+ *  @param totalFee   支付金额,以分为单位
+ *  @param outTradeNo 商户系统内部的订单号,32个字符内、包含数字与字母,确保在商户系统中唯一
+ *  @param traceId    支付用户ID，必须保证在商户系统中唯一
+ *  @param optional   扩展参数，可以传入任意数量的key/value对来补充对业务逻辑的需求
+ *  @param block      支付结果回调
  */
-+ (void)reqWXPayV3:(NSString *)wx_body
-          totalFee:(NSString *)wx_totalFee
-        outTradeNo:(NSString *)wx_outTradeNo
-           traceID:(NSString *)wx_traceId
++ (void)reqWXPayV3:(NSString *)body
+          totalFee:(NSString *)totalFee
+        outTradeNo:(NSString *)outTradeNo
+           traceID:(NSString *)traceId
           optional:(NSDictionary *)optional
           payBlock:(BCPayBlock)block;
-
-/**
- *  根据商家提供的订单号，异步查询该订单状态是否支持退款。
- *
- *  @param wx_outTradeNo 商户系统内部的订单号,32个字符内、包含数字与字母,确保在商户系统中唯一
- *  @param block         如果支持退款，success=YES,strMsg=可退款金额；如果不支持退款，success=NO,strMsg=不支持退款原因。
- */
-+ (void)canRefundForWeChatPay:(NSString *)wx_outTradeNo block:(BCPayBlock)block;
 
 /**
  *  根据out_trade_no，out_refund_no, refundReason,refundFee查询订单是否可退款，允许退款情况下自动生成预退款订单，否则返回不可退款原因。预退款订单生成成功后，在BeeCloud商户后台对预退款订单进行处理。
  *
- *  @param wx_outTradeNo   商户系统内部的支付订单号,32个字符内、包含数字与字母,确保在商户系统中唯一
- *  @param wx_outRefundNo  商户系统内部的退款订单号,32个字符内、包含数字与字母,确保在商户系统中唯一
- *  @param wx_refundReason 用户退款理由
- *  @param wx_refundFee    用户欲退款金额，以分为单位
- *  @param block           退款结果回调.如果预退款成功,success=YES;失败success=NO.
+ *  @param outTradeNo   商户系统内部的支付订单号,32个字符内、包含数字与字母,确保在商户系统中唯一
+ *  @param outRefundNo  商户系统内部的退款订单号,32个字符内、包含数字与字母,确保在商户系统中唯一
+ *  @param refundReason 用户退款理由
+ *  @param refundFee    用户欲退款金额，以分为单位
+ *  @param block        退款结果回调.如果预退款成功,success=YES;失败success=NO.
  */
-+ (void)reqWXRefund:(NSString *)wx_outTradeNo
-        outRefundNo:(NSString *)wx_outRefundNo
-       refundReason:(NSString *)wx_refundReason
-          refundFee:(NSString *)wx_refundFee
-           payBlock:(BCPayBlock)block;
++ (void)reqWXRefundV3:(NSString *)outTradeNo
+          outRefundNo:(NSString *)outRefundNo
+         refundReason:(NSString *)refundReason
+            refundFee:(NSString *)refundFee
+             payBlock:(BCPayBlock)block;
+
+/**
+ *  根据商户自定义退款订单号查询退款状态。
+ *
+ *  @param out_refund_no 商户自定义退款订单号
+ *  @param block         退款状态回调。success=YES时，正确返回从微信后台获取的退款状态;success=NO时，返回退款查询请求失败原因。
+ */
++ (void)reqQueryRefund:(NSString *)out_refund_no block:(BCPayBlock)block;
 
 /**
  *  同步查询支付订单或退款订单。内置购买只支持查询支付订单表。
  *
  *  @param key   根据key查询。trace_id,out_trade_no,our_refund_no
  *  @param value 要查询的值
- *  @param type    支付平台的支付订单或者退款订单。
+ *  @param type  支付平台的支付订单或者退款订单。
  *
  *  @return 符合条件的订单列表
- ("subject",商品名称) ("body",商品描述) ("buyer_id",买家ID) ("buyer_email",买家emai) ("trace_time",订单创建时间)
- ("out_trade_no",商家自定义订单号) ("partner",商家ID) ("refund_status",退款状态)
- ("seller_email",卖家email) ("seller_id",卖家ID) ("total_fee",支付金额) ("trace_id",商户平台用户名)
- ("trade_state",交易状态) ("trace_no",交易流水号) ("refund_finish",退款操作是否完成)
- ("refund_fee",退款金额) ("refund_reason",退款原因) ("reject_reason",拒绝退款原因)
- ("refund_status",退款实时状态)
- @refund status
- REFUND_START = 0; //退款开始
- REFUND_REJECT = 1; //退款被商家拒绝
- REFUND_ACCEPT = 2; //退款被商家同意
- REFUND_SUCCESS = 3; //退款成功
- REFUND_FAIL = 4; //退款被渠道拒绝
- REFUND_RETRY = 5; //退款被渠道拒绝，但原因不明， 需要用原退款单号重试
- REFUND_NEED_OFFLINE = 6; //用户银行卡已注销，现金回流到商户账户，需要走线下人工操作
  */
 + (NSArray *)queryWXPayOrderByKey:(BCPayOrderKey)key value:(NSString *)value orderType:(BCPayOrderType)type;
 
@@ -124,7 +91,7 @@ FOUNDATION_EXPORT const unsigned char BCWXPayVersionString[];
  *
  *  @param key   根据key查询。trace_id,out_trade_no,our_refund_no
  *  @param value 要查询的值
- *  @param type    支付平台的支付订单或者退款订单
+ *  @param type  支付平台的支付订单或者退款订单
  *  @param block 接收查询结果
  */
 + (void)queryWXPayOrderByKeyAsync:(BCPayOrderKey)key value:(NSString *)value orderType:(BCPayOrderType)type block:(BCArrayResultBlock)block;

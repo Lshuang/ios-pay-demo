@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36A068D81B2FC335004A9D92 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A068D71B2FC335004A9D92 /* libWeChatSDK.a */; };
 		A8279A5D1B14C8550031C5B1 /* BCMMMPay.framework in Resources */ = {isa = PBXBuildFile; fileRef = A8E1BA531B143A9800F2DBF7 /* BCMMMPay.framework */; };
 		A89785511AC5398100466E0F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A89785501AC5398000466E0F /* libc++.dylib */; };
 		A89785531AC539A400466E0F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A89785521AC539A400466E0F /* libz.dylib */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36A068D71B2FC335004A9D92 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libWeChatSDK.a; path = dependency/libWeChatSDK.a; sourceTree = "<group>"; };
 		A89785501AC5398000466E0F /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		A89785521AC539A400466E0F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		A89785541AC539B500466E0F /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
@@ -121,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A068D81B2FC335004A9D92 /* libWeChatSDK.a in Frameworks */,
 				A8E1BA551B143AB900F2DBF7 /* BCMMMPay.framework in Frameworks */,
 				A8D916B71AE48A0800D58EB0 /* BeeCloud.framework in Frameworks */,
 				A8D8A2611AE0B0C0008715D9 /* BCIAPay.framework in Frameworks */,
@@ -257,6 +260,7 @@
 		A8B5140B1AC52600009C11AE /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				36A068D71B2FC335004A9D92 /* libWeChatSDK.a */,
 				A8E1BA531B143A9800F2DBF7 /* BCMMMPay.framework */,
 				A8F326A21AE0CE1000F2C321 /* StoreKit.framework */,
 				A8D8A25F1AE0B099008715D9 /* BCIAPay.framework */,
@@ -542,6 +546,10 @@
 				INFOPLIST_FILE = SPayUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dependency",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -562,6 +570,10 @@
 				INFOPLIST_FILE = SPayUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/dependency",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
