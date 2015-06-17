@@ -32,7 +32,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 3;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -45,9 +45,6 @@
             break;
         case 2:
             [self unionPay];
-            break;
-        case 3:
-            [self mmmPay];
             break;
         default:
             break;
@@ -98,20 +95,6 @@
             [self.navigationController pushViewController:successViewController animated:YES];
         }else{
           
-        }
-    }];
-}
-
-- (void)mmmPay {
-    [BCMMMPay reqMMMPay:@"183338" billNo:self.customInfo.outTradeNo amount:[NSString stringWithFormat:@"%.2f",self.totalCost] paymentType:@"" products:@"AppleNike" viewController:self payblock:^(BOOL success, NSString *strMsg, NSError *error) {
-        if (success) {
-            NSString * storyboardName = @"CheckOutProcess";
-            NSString * viewControllerID = @"SuccessViewController";
-            UIStoryboard * storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:nil];
-            SuccessViewController *successViewController = [storyboard instantiateViewControllerWithIdentifier:viewControllerID];
-            [self.navigationController pushViewController:successViewController animated:YES];
-        }else{
-            NSLog(@"MMMPay Faild:%@",error.description);
         }
     }];
 }
